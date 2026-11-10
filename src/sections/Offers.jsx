@@ -24,7 +24,7 @@ export default function Offers() {
             start: 'top top',
             end: () => `+=${dist()}`,
             pin: true,
-            scrub: 1,
+            scrub: 0.6,
             invalidateOnRefresh: true,
           },
         });
@@ -109,7 +109,7 @@ export default function Offers() {
               );
             })}
             <li className="offer offer--more">
-              <a href="#reseau" className="offer__link">
+              <a href="/tg/fr/fly/network/international" className="offer__link">
                 <Icon name="globe" size={40} />
                 <p>
                   Les 30 destinations

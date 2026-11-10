@@ -8,14 +8,21 @@ const TABS = [
   { id: 'manage', label: 'Gérer ma réservation', icon: 'ticket' },
   { id: 'checkin', label: 'Enregistrement', icon: 'checkin' },
   { id: 'status', label: 'Statut du vol', icon: 'status' },
+  { id: 'schedule', label: 'Horaires', icon: 'calendar' },
 ];
+const HINTS = {
+  manage: 'Modifiez vos dates, ajoutez des bagages ou choisissez votre siège.',
+  checkin: 'L’enregistrement en ligne ouvre 24 h avant le départ.',
+  status: 'Suivez votre vol en temps réel : départ, arrivée, retards éventuels.',
+  schedule: 'Consultez les jours et heures de vol entre deux villes du réseau ASKY.',
+};
 const CITY_LIST = Object.entries(CITIES).sort((a, b) => a[1].name.localeCompare(b[1].name, 'fr'));
 const today = new Date().toISOString().slice(0, 10);
 
-export default function Booking() {
+export default function Booking({ initialTab = 'book', embedded = false }) {
   const root = useRef(null);
   const tabsRef = useRef(null);
-  const [tab, setTab] = useState('book');
+  const [tab, setTab] = useState(initialTab);
   const [trip, setTrip] = useState('rt');
   const [from, setFrom] = useState('LFW');
   const [to, setTo] = useState('BGF');
@@ -84,9 +91,9 @@ export default function Booking() {
     });
 
   return (
-    <section className="booking" id="reserver" ref={root}>
+    <section className={`booking ${embedded ? 'booking--embedded' : ''}`} id={embedded ? undefined : 'reserver'} ref={root}>
       <div className="container">
-        <div className="booking__head">
+        <div className="booking__head" hidden={embedded}>
           <p className="eyebrow eyebrow--light">
             <Icon name="ticket" size={14} /> Réservation en ligne
           </p>
@@ -231,17 +238,50 @@ export default function Booking() {
               </>
             )}
 
-            {tab !== 'book' && (
+            {tab === 'schedule' && (
               <>
-                <p className="booking__hint">
-                  {
-                    {
-                      manage: 'Modifiez vos dates, ajoutez des bagages ou choisissez votre siège.',
-                      checkin: 'L’enregistrement en ligne ouvre 24 h avant le départ.',
-                      status: 'Suivez votre vol en temps réel : départ, arrivée, retards éventuels.',
-                    }[tab]
-                  }
-                </p>
+                <p className="booking__hint">{HINTS.schedule}</p>
+                <div className="fields fields--schedule">
+                  <label className="field">
+                    <span className="field__label">
+                      <Icon name="takeoff" size={16} /> De
+                    </span>
+                    <select value={from} onChange={(e) => setFrom(e.target.value)}>
+                      {CITY_LIST.map(([code, c]) => (
+                        <option key={code} value={code}>
+                          {c.name} ({code})
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className="field">
+                    <span className="field__label">
+                      <Icon name="landing" size={16} /> À
+                    </span>
+                    <select value={to} onChange={(e) => setTo(e.target.value)}>
+                      {CITY_LIST.map(([code, c]) => (
+                        <option key={code} value={code}>
+                          {c.name} ({code})
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className="field">
+                    <span className="field__label">
+                      <Icon name="calendar" size={16} /> Semaine du
+                    </span>
+                    <input type="date" min={today} defaultValue={today} />
+                  </label>
+                  <button className="btn btn--primary btn--lg" type="submit">
+                    Voir les horaires <Icon name="arrow" size={18} />
+                  </button>
+                </div>
+              </>
+            )}
+
+            {tab !== 'book' && tab !== 'schedule' && (
+              <>
+                <p className="booking__hint">{HINTS[tab]}</p>
                 <div className="fields fields--simple">
                   <label className="field">
                     <span className="field__label">
@@ -267,7 +307,7 @@ export default function Booking() {
           {toast && <div className="toast" role="status">{toast}</div>}
         </div>
 
-        <ul className="quick">
+        <ul className="quick" hidden={embedded}>
           {[
             ['checkin', 'Enregistrement en ligne', 'Gagnez du temps à l’aéroport', 'checkin'],
             ['ticket', 'Gérer ma réservation', 'Sièges, bagages, changements', 'manage'],

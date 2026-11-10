@@ -7,6 +7,7 @@ const ITEMS = [
   {
     icon: 'sparkle',
     title: 'Expérience ASKY',
+    href: '/tg/fr/explore/services/asky-experience',
     text: 'Confort à bord, service attentionné et application mobile pour voyager l’esprit léger.',
     img: '/img/experience.jpg',
     tag: 'Services',
@@ -14,6 +15,7 @@ const ITEMS = [
   {
     icon: 'book',
     title: 'Magazine de bord Calebasse n°69',
+    href: '/tg/fr/explore/services',
     text: 'Culture, voyages et talents du continent : le magazine qui vous accompagne à bord.',
     img: '/img/calebasse.jpg',
     tag: 'À lire',
@@ -21,6 +23,7 @@ const ITEMS = [
   {
     icon: 'star',
     title: 'ASKY Club',
+    href: '/tg/fr/explore/asky-club/overview',
     text: 'Le programme de fidélité : cumulez des miles à chaque vol et profitez d’avantages exclusifs.',
     img: '/img/club.jpg',
     tag: 'Fidélité',
@@ -28,6 +31,7 @@ const ITEMS = [
   {
     icon: 'palm',
     title: 'Vacances ASKY',
+    href: 'https://www.flyasky.com/tg/fr/explore/vacations',
     text: 'Forfaits touristiques au Bénin, en Côte d’Ivoire, au Sénégal, au Ghana et au Togo.',
     img: '/img/freetown.jpg',
     tag: 'Forfaits',
@@ -116,7 +120,7 @@ export default function Discover() {
           {ITEMS.map((it, i) => (
             <li key={it.title} className="svc" data-img={it.img}>
               <span className="svc__line" />
-              <a href="#" className="svc__in">
+              <a href={it.href} className="svc__in" {...(it.href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {})}>
                 <span className="svc__num">{String(i + 1).padStart(2, '0')}</span>
                 <span className="svc__ic">
                   <Icon name={it.icon} size={24} />

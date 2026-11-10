@@ -1,0 +1,2019 @@
+{
+ "/tg/fr/corporate/about": {
+  "title": "About",
+  "crumbs": [
+   "Entreprise"
+  ],
+  "crumbLinks": [
+   "/tg/fr/corporate"
+  ],
+  "children": [
+   [
+    "/tg/fr/corporate/about/asky",
+    "ASKY"
+   ],
+   [
+    "/tg/fr/corporate/about/figures",
+    "Les figures"
+   ],
+   [
+    "/tg/fr/corporate/about/activities",
+    "Activités"
+   ]
+  ],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/corporate/about/activities": {
+  "title": "Activities",
+  "crumbs": [
+   "Entreprise",
+   "Sur"
+  ],
+  "crumbLinks": [
+   "/tg/fr/corporate",
+   "/tg/fr/corporate/about"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "Le Transport de passagers"
+   },
+   {
+    "t": "p",
+    "html": "Le transport de passagers est la première activité de la Compagnie en termes de chiffre d’affaires. Le service passagers est constitué d’un ensemble d’équipes chargées :"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "d’accueillir et de prendre en charge les passagers,",
+     "de gérer les réservations,",
+     "d’assurer les relations avec les compagnies aériennes,",
+     "d’être le garant d’une politique de qualité et d’image auprès des compagnies aériennes, des clients, des usagers,",
+     "de suivre les litiges commerciaux spécifiques ou litiges bagages."
+    ]
+   },
+   {
+    "t": "p",
+    "html": "Le service passage ASKY repose sur des compétences en langues, en informatique, en toutes matières relatives à la sûreté et à la sécurité des passagers, des professionnels qui connaissent et respectent les procédures définies, et qui sont préparés à anticiper et à gérer des situations exceptionnelles ou de crise. Tout le long de la chaîne, ASKY garde un souci constant de professionnalisme et de qualité de service dans ses prestations."
+   },
+   {
+    "t": "h",
+    "text": "Le courrier"
+   },
+   {
+    "t": "p",
+    "html": "Le trafic aéropostal est aujourd’hui incontestablement un service qu’offrent toutes les compagnies aériennes à dimension mondiale comme ASKY. ASKY offre des possibilités de partenariats avec les services postaux du continent mais aussi du monde pour le transport d’autant de tonnes métriques que le dynamisme des économies lui demandera de transporter à travers le monde."
+   },
+   {
+    "t": "p",
+    "html": "ASKY entend se donner les moyens de la qualité, de la régularité et de la ponctualité, qui déterminent un service courrier compétitif."
+   }
+  ]
+ },
+ "/tg/fr/corporate/about/asky": {
+  "title": "ASKY",
+  "crumbs": [
+   "Entreprise",
+   "Sur"
+  ],
+  "crumbLinks": [
+   "/tg/fr/corporate",
+   "/tg/fr/corporate/about"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "Raisons d’être"
+   },
+   {
+    "t": "p",
+    "html": "Suite au dépôt de bilan de la compagnie multinationale AIR AFRIQUE en 2002, il est apparu un grand vide dans le transport aérien en Afrique, créant de sérieuses difficultés pour la circulation des personnes et des biens en Afrique de l’Ouest et du Centre."
+   },
+   {
+    "t": "p",
+    "html": "Consciente de ces difficultés, la Conférence des Chefs d’Etat et de Gouvernement de la Communauté Economique des Etats de l’Afrique de l’Ouest (CEDEAO) et de l’Union Economique et Monétaire Ouest Africaine (UEMOA), réunie à Niamey (Niger) le 10 janvier 2004, décide de doter l’espace communautaire d’un outil d’intégration régionale dans le domaine du transport aérien, d’essence privée, compétitif, rentable et offrant toutes les garanties de sécurité et de sûreté."
+   },
+   {
+    "t": "p",
+    "html": "Faisant suite à cette décision, le Secrétariat Exécutif de la CEDEAO, la Banque d’Investissement et de Développement de la CEDEAO (BIDC), la Commission de l’UEMOA, la Banque Centrale des Etats de l’Afrique de l’Ouest (BCEAO), la Banque Ouest Africaine de Développement (BOAD) et le Groupe ECOBANK se réunissent au siège de la BCEAO à Dakar le 29 août 2005 et décident de créer une société en vue de la promotion d’une compagnie communautaire."
+   },
+   {
+    "t": "p",
+    "html": "En septembre 2005, la Société de Promotion d’une Compagnie Aérienne Régionale (SPCAR) est créée pour menée les différentes études de faisabilité, de marché, et recherchée les différents partenaires financiers et stratégiques. SPCAR a entrepris toutes les démarches qui ont conduit à la création en novembre 2007 de ASKY."
+   },
+   {
+    "t": "h",
+    "text": "Vision et mission"
+   },
+   {
+    "t": "h",
+    "text": "Vision"
+   },
+   {
+    "t": "p",
+    "html": "Etre une compagnie aérienne internationale ayant une touche Africaine; une compagnie qui dessert et relie les pays africains entre eux et l’Afrique au reste du monde, à travers un service d’excellente qualité."
+   },
+   {
+    "t": "h",
+    "text": "Mission"
+   },
+   {
+    "t": "p",
+    "html": "Accompagner et faciliter de façon dynamique les activités économiques et commerciales par la création de nouveaux itinéraires de transport entre les Etats de la région et ses nouveaux partenaires commerciaux."
+   },
+   {
+    "t": "p",
+    "html": "Offrir des liaisons régulières, sûres et fiables, à des prix compétitifs."
+   },
+   {
+    "t": "p",
+    "html": "Faciliter les différentes connexions par son large réseau et la ponctualité de ses vols."
+   },
+   {
+    "t": "p",
+    "html": "Contribuer au développement du tourisme intra-africain et du tourisme international en direction de l’Afrique."
+   },
+   {
+    "t": "h",
+    "text": "Identité"
+   },
+   {
+    "t": "p",
+    "html": "L’identité d’une entreprise, comme celle d’un homme, est primordiale dans la vie et le succès attendus. Aussi ASKY, la nouvelle compagnie aérienne régionale a opté pour un système identitaire représentatif des idéaux qu’elle incarne et des rêves qu’elle nourrit."
+   },
+   {
+    "t": "p",
+    "html": "Ce système se décline d’abord à travers le nom, très court pour être facilement mémorisé par les usagers, le personnel et tous les Africains. Un grand effort a été fait pour le démarquer des noms de compagnies aériennes, qui jusqu’à ce jour ont opéré sur le continent. Littéralement, ce nom signifie ciel africain, allusion à la fois à l’appartenance de la compagnie au continent africain, mais aussi à la légitime revendication du ciel africain comme endroit où, d’abord et avant tout, doivent évoluer des opérateurs africains. Ce nom que le logotype de la compagnie va reprendre et exalter est écrit en lettres capitales pour traduire la solidité, la robustesse, l’autorité dont ASKY entend faire preuve dans le ciel africain."
+   },
+   {
+    "t": "p",
+    "html": "A côté du nom, le logo met en relief la carte du continent pour réaffirmer l’enracinement de la nouvelle compagnie aérienne dans le continent africain, dans sa culture, dans ses traditions, dans les rêves de ses enfants. La courbe qui part du nom, pour monter et consacrer l'Afrique comme une couronne, symbolise à la fois la compagnie qui vole, qui est performante et qui fait la fierté de l’Afrique."
+   },
+   {
+    "t": "p",
+    "html": "Ce système identitaire repose sur deux couleurs seulement : le marron et l’or. Le marron symbolise la terre africaine, sa robustesse, sa solidité, l’enracinement de la compagnie dans le continent africain. L’or symbolise les nobles ambitions, la prospérité, le bonheur. Il est à remarquer qu’en alliant ces deux couleurs, le nom de la compagnie, à la base des lettres est de couleur marron, confirmant la notion d’enracinement, et dans la partie supérieure est de couleur or, symbolisant une aspiration à incarner la prospérité du continent, ses ambitions, à faire sa fierté."
+   }
+  ]
+ },
+ "/tg/fr/corporate/about/figures": {
+  "title": "Figures",
+  "crumbs": [
+   "Entreprise",
+   "Sur"
+  ],
+  "crumbLinks": [
+   "/tg/fr/corporate",
+   "/tg/fr/corporate/about"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "Passagers"
+   },
+   {
+    "t": "table",
+    "rows": [
+     [
+      "<strong>Année</strong>",
+      "<strong>Nombres de Passagers </strong>"
+     ],
+     [
+      "<strong>2010</strong>",
+      "<strong>179 128</strong>"
+     ],
+     [
+      "<strong>2011</strong>",
+      "<strong>344 383</strong>"
+     ],
+     [
+      "<strong>2012</strong>",
+      "<strong>402 240</strong>"
+     ],
+     [
+      "<strong>2013</strong>",
+      "<strong>488 576</strong>"
+     ],
+     [
+      "<strong>2014</strong>",
+      "<strong>440 222</strong>"
+     ],
+     [
+      "<strong>2015</strong>",
+      "<strong>481 863</strong>"
+     ],
+     [
+      "<strong>2016</strong>",
+      "<strong>488 100</strong>"
+     ],
+     [
+      "<strong>2017</strong>",
+      "<strong>488 225</strong>"
+     ],
+     [
+      "<strong>2018</strong>",
+      "<strong>559 004</strong>"
+     ],
+     [
+      "<strong>2019</strong>",
+      "<strong>628 452</strong>"
+     ],
+     [
+      "<strong>2020</strong>",
+      "<strong>325 770</strong>"
+     ],
+     [
+      "<strong>2021</strong>",
+      "<strong>670 207</strong>"
+     ],
+     [
+      "<strong>2022</strong>",
+      "<strong>955 071</strong>"
+     ],
+     [
+      "<strong>2023</strong>",
+      "<strong>1 127 746</strong>"
+     ],
+     [
+      "<strong> Total </strong>",
+      "<strong> 7 090 762<br></strong>"
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "html": "+ 7 millions de passagers transportés depuis 2010"
+   },
+   {
+    "t": "h",
+    "text": "Transport cargo"
+   },
+   {
+    "t": "h",
+    "text": "N’opérant pas véritablement encore avec des appareils cargo, ASKY traite uniquement du cargo bag."
+   },
+   {
+    "t": "p",
+    "html": "ASKY utilise les espaces libre dans les soutes des avions de transport de passagers pour du cargo. Des centaines de tonnes de cargo ont été déjà transportés"
+   },
+   {
+    "t": "h",
+    "text": "Le Réseau de ASKY"
+   },
+   {
+    "t": "p",
+    "html": "Le réseau d'ASKY couvre actuellement 28 destinations dans 26 pays d'Afrique de l'Ouest et du Centre. ASKY exploite actuellement 216 vols par semaine sur son réseau avec une moyenne de 22 000 passagers transportés par semaine. Ce réseau est construit autour de son hub de Lomé qui se positionne progressivement comme un hub régional. D'un point de vue stratégique, le hub de Lomé a l'avantage d'être positionné à mi-chemin entre l'Afrique de l'Ouest et l'Afrique Centrale, permettant une connexion parfaite entre ces deux régions. Le réseau d'ASKY est connecté à celui de son partenaire stratégique - Ethiopian Airlines - et les horaires des vols sont conçus de manière à permettre des liaisons rapides pour les passagers de Lomé vers le reste du monde avec Ethiopian Airlines."
+   },
+   {
+    "t": "h",
+    "text": "Effectifs"
+   },
+   {
+    "t": "p",
+    "html": "Plus de 30 nationalités en majorité d'Afrique de l'ouest et du centre."
+   },
+   {
+    "t": "p",
+    "html": "Personnel au sol : 323<br>Personnel navigant technique : 77<br>Personnel navigant commercial : 148"
+   }
+  ]
+ },
+ "/tg/fr/corporate/about/leadership": {
+  "title": "corporate_about_leadership",
+  "crumbs": [],
+  "crumbLinks": [],
+  "children": [],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/corporate/career": {
+  "title": "Career",
+  "crumbs": [
+   "Entreprise"
+  ],
+  "crumbLinks": [
+   "/tg/fr/corporate"
+  ],
+  "children": [
+   [
+    "/tg/fr/corporate/career/airline-jobs",
+    "Emplois dans les compagnies aériennes"
+   ],
+   [
+    "/tg/fr/corporate/career/student-graduates",
+    "Étudiants diplômés"
+   ],
+   [
+    "/tg/fr/corporate/career/job-offers",
+    "Offres d'emploi"
+   ]
+  ],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/explore/asky-club": {
+  "title": "ASKY Club",
+  "crumbs": [
+   "Explorer"
+  ],
+  "crumbLinks": [
+   "/tg/fr/explore"
+  ],
+  "children": [
+   [
+    "/tg/fr/explore/asky-club/overview",
+    "Aperçu"
+   ],
+   [
+    "/tg/fr/explore/asky-club/join",
+    "Rejoindre"
+   ]
+  ],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/explore/asky-club/overview": {
+  "title": "Overview",
+  "crumbs": [
+   "Explorer",
+   "ASKY Club"
+  ],
+  "crumbLinks": [
+   "/tg/fr/explore",
+   "/tg/fr/explore/asky-club"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "ASKYCLUB fait évoluer ses règles pour mieux vous récompenser"
+   },
+   {
+    "t": "p",
+    "html": "Fidèle à sa volonté d’améliorer continuellement l’expérience de ses passagers, <strong>ASKYCLUB</strong>, le programme de fidélité de ASKY, introduit une évolution majeure dans son fonctionnement."
+   },
+   {
+    "t": "p",
+    "html": "Désormais, le changement de statut ne repose plus uniquement sur les miles accumulés. Vous pouvez évoluer au <strong>premier critère atteint</strong> : soit le nombre de miles, soit le nombre de vols effectués.<br><strong><br>  Comment cela fonctionne concrètement ?</strong>"
+   },
+   {
+    "t": "p",
+    "html": "Un système parallèle est désormais mis en place : <strong>miles OU nombre de vols</strong>."
+   },
+   {
+    "t": "p",
+    "html": "<strong><em>Accession au niveau SILVER<br></em></strong>Vous accédez au statut <strong>SILVER</strong> si vous atteignez, sur une période de 12 mois :"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "<strong>25 000 miles</strong>, ou",
+     "<strong>20 vols effectués</strong>"
+    ]
+   },
+   {
+    "t": "p",
+    "html": "Autrement dit, même si vous n’avez pas atteint les 25 000 miles, vos 20 vols suffisent pour passer au niveau supérieur. Et inversement."
+   },
+   {
+    "t": "p",
+    "html": "<strong><em>Une nouvelle périodicité plus équitable<br></em></strong>La durée de validité est désormais calculée à partir de votre date d’accession au statut."
+   },
+   {
+    "t": "p",
+    "html": "<strong><em>Une fois au niveau SILVER (validité 12 mois)<br></em></strong>Pour :"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "<strong>Rester SILVER</strong> : 25 000 miles ou 20 vols",
+     "<strong>Passer GOLD</strong> : 50 000 miles ou 48 vols"
+    ]
+   },
+   {
+    "t": "p",
+    "html": "<strong><em>Une fois au niveau GOLD (validité 12 mois)<br></em></strong>Pour :"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "<strong>Rester GOLD</strong> : 50 000 miles ou 48 vols",
+     "<strong>Passer BLACK</strong> : 100 000 miles ou 90 vols"
+    ]
+   },
+   {
+    "t": "p",
+    "html": "Si les seuils ne sont pas atteints, une rétrogradation au niveau immédiatement inférieur est appliquée."
+   },
+   {
+    "t": "h",
+    "text": "Niveau BLACK (validité 24 mois)"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "Pour conserver le statut : 100 000 miles ou 90 vols sur 24 mois",
+     "Sinon, rétrogradation au niveau GOLD"
+    ]
+   },
+   {
+    "t": "p",
+    "html": "À chaque changement de niveau, le compteur est réinitialisé pour la nouvelle période."
+   },
+   {
+    "t": "p",
+    "html": "Il convient de rappeler que les membres SILVER bénéficient de 25% Bonus Miles sur chaque voyage effectué, tandis que les membres GOLD bénéficient de 50% et les membres BLACK de 100% de bonus."
+   },
+   {
+    "t": "h",
+    "text": "Un programme aligné sur les standards internationaux"
+   },
+   {
+    "t": "p",
+    "html": "Cette évolution permet d’adapter ASKYCLUB à la réalité de notre réseau, qui combine vols régionaux fréquents et vols plus longs. Elle vise à offrir davantage d’équité et de reconnaissance à tous les profils de voyageurs."
+   },
+   {
+    "t": "h",
+    "text": "Rappel important concernant les miles"
+   },
+   {
+    "t": "p",
+    "html": "Pour bien profiter de votre programme :"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "L’adhésion est obligatoire pour cumuler des miles",
+     "Assurez-vous d’indiquer votre numéro ASKYCLUB lors de la réservation ou à l’enregistrement",
+     "Le nom du compte fidélité doit correspondre exactement à celui figurant sur le billet",
+     "Les miles expirent après <strong>4 ans s’ils ne sont pas utilisés.</strong>"
+    ]
+   },
+   {
+    "t": "h",
+    "text": "Utilisation des miles"
+   },
+   {
+    "t": "p",
+    "html": "Vos miles peuvent être utilisés pour acheter pour vous-mêmes ou des proches:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "Des billets gratuits",
+     "Des surclassements",
+     "Des excédents de bagages"
+    ]
+   },
+   {
+    "t": "p",
+    "html": "Vous pouvez également :"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "Offrir vos miles à un autre membre du programme de fidélité",
+     "Acheter des miles pour compléter votre solde",
+     "Racheter des miles expirés (dans un délai de 3 mois)",
+     "Prolonger la validité des miles pour une durée maximale d’un an."
+    ]
+   },
+   {
+    "t": "p",
+    "html": "Pour toute information complémentaire, contactez le bureau ASKY le plus proche ou écrivez à <a href=\"mailto:askyclub@flyasky.com\"><strong>askyclub@flyasky.com</strong></a>."
+   },
+   {
+    "t": "p",
+    "html": "ASKYCLUB évolue pour vous offrir plus de flexibilité, plus de reconnaissance et plus d’avantages à chaque voyage."
+   }
+  ]
+ },
+ "/tg/fr/explore/services": {
+  "title": "Services",
+  "crumbs": [
+   "Explorer"
+  ],
+  "crumbLinks": [
+   "/tg/fr/explore"
+  ],
+  "children": [
+   [
+    "/tg/fr/explore/services/asky-experience",
+    "Expérience ASKY"
+   ],
+   [
+    "/tg/fr/explore/services/loyalty-program",
+    "Programme de fidélité"
+   ]
+  ],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/explore/services/asky-experience": {
+  "title": "ASKY Experience",
+  "crumbs": [
+   "Explorer",
+   "Services"
+  ],
+  "crumbLinks": [
+   "/tg/fr/explore",
+   "/tg/fr/explore/services"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "L’expérience ASKY"
+   },
+   {
+    "t": "p",
+    "html": "A bord de ses avions, le temps d'un voyage, ASKY propose à ses clients de vivre des moments privilégiés de plaisir et de détente avec une touche africaine, une touche ASKY. Evidemment cette expérience ASKY commence déjà aux comptoirs de nos agences."
+   },
+   {
+    "t": "h",
+    "text": "Des services de qualité"
+   },
+   {
+    "t": "p",
+    "html": "L'excellence des services est au rendez-vous, quelle que soit la classe de voyage."
+   },
+   {
+    "t": "p",
+    "html": "Au prime abord, un accent particulier est mis sur l’accueil."
+   },
+   {
+    "t": "p",
+    "html": "La restauration en vol occupe également une place particulière, avec un constant souci de qualité. Notre personnel navigant commercial demeure à votre petit soin dans la limite des disponibilités."
+   },
+   {
+    "t": "p",
+    "html": "En Business Class, vous êtes traité comme des princes et des princesses. Au service de premier choix, s’ajoute une diversité de magazines et de journaux pour votre divertissement."
+   },
+   {
+    "t": "h",
+    "text": "La ponctualité"
+   },
+   {
+    "t": "p",
+    "html": "Autre élément important pour apprécier la qualité de nos services, la ponctualité de nos vols."
+   },
+   {
+    "t": "p",
+    "html": "ASKY met tout en œuvre pour un respect scrupuleux de ses horaires. Ne soyez pas surpris lorsque votre vol partirait quelques minutes plus tôt que prévu."
+   },
+   {
+    "t": "p",
+    "html": "ASKY se place indéniablement dans le peloton de tête des compagnies en Afrique en matière de ponctualité"
+   }
+  ]
+ },
+ "/tg/fr/explore/support/feedback": {
+  "title": "Feedback",
+  "crumbs": [
+   "Explorer",
+   "Commentaires"
+  ],
+  "crumbLinks": [
+   "/tg/fr/explore",
+   "/tg/fr/explore/support"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/explore/support/subscription": {
+  "title": "explore_support_subscription",
+  "crumbs": [],
+  "crumbLinks": [],
+  "children": [],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/fly/booking": {
+  "title": "Booking",
+  "crumbs": [
+   "Voyagez"
+  ],
+  "crumbLinks": [
+   "/tg/fr/fly"
+  ],
+  "children": [
+   [
+    "/tg/fr/fly/booking/flight",
+    "Vol"
+   ],
+   [
+    "/tg/fr/fly/booking/manage",
+    "Gérer"
+   ],
+   [
+    "/tg/fr/fly/booking/check-in",
+    "Enregistrement"
+   ],
+   [
+    "/tg/fr/fly/booking/status",
+    "L'état"
+   ],
+   [
+    "/tg/fr/fly/booking/schedule",
+    "L'horaire"
+   ]
+  ],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/fly/booking/check-in": {
+  "title": "Check-in",
+  "crumbs": [
+   "Voyagez",
+   "Réservation"
+  ],
+  "crumbLinks": [
+   "/tg/fr/fly",
+   "/tg/fr/fly/booking"
+  ],
+  "children": [],
+  "form": true,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "Enregistrement"
+   }
+  ]
+ },
+ "/tg/fr/fly/booking/manage": {
+  "title": "Manage",
+  "crumbs": [
+   "Voyagez",
+   "Réservation"
+  ],
+  "crumbLinks": [
+   "/tg/fr/fly",
+   "/tg/fr/fly/booking"
+  ],
+  "children": [],
+  "form": true,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "GÉRER LA RÉSERVATION"
+   }
+  ]
+ },
+ "/tg/fr/fly/booking/schedule": {
+  "title": "Schedule",
+  "crumbs": [
+   "Voyagez",
+   "Réservation"
+  ],
+  "crumbLinks": [
+   "/tg/fr/fly",
+   "/tg/fr/fly/booking"
+  ],
+  "children": [],
+  "form": true,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "Horaire de vol"
+   }
+  ]
+ },
+ "/tg/fr/fly/booking/status": {
+  "title": "Status",
+  "crumbs": [
+   "Voyagez",
+   "Réservation"
+  ],
+  "crumbLinks": [
+   "/tg/fr/fly",
+   "/tg/fr/fly/booking"
+  ],
+  "children": [],
+  "form": true,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "L'état du vol"
+   }
+  ]
+ },
+ "/tg/fr/fly/fleet": {
+  "title": "Fleet",
+  "crumbs": [
+   "Voyagez"
+  ],
+  "crumbLinks": [
+   "/tg/fr/fly"
+  ],
+  "children": [
+   [
+    "/tg/fr/fly/fleet/boeing-737-max",
+    "Boeing 737 MAX"
+   ],
+   [
+    "/tg/fr/fly/fleet/modern-aircrafts",
+    "Une flotte moderne"
+   ],
+   [
+    "/tg/fr/fly/fleet/boeing-737-800-aircraft",
+    "Avion B-737-800"
+   ]
+  ],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/fly/fleet/boeing-737-800-aircraft": {
+  "title": "B-737-800 aircraft",
+  "crumbs": [
+   "Voyagez",
+   "Flotte"
+  ],
+  "crumbLinks": [
+   "/tg/fr/fly",
+   "/tg/fr/fly/fleet"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "img",
+    "src": "/img/pages/en-boeing-737-800.jpg",
+    "alt": "flyasky-asky-en-boeing-737-800.jpg"
+   },
+   {
+    "t": "h",
+    "text": "Avion Boeing 737-800"
+   },
+   {
+    "t": "table",
+    "rows": [
+     [
+      "<strong>Carte de la Cabine <br></strong>",
+      ""
+     ],
+     [
+      "<strong><br>Capacité (passagers)<br><br><br></strong>",
+      "154<br>16C/138Y"
+     ],
+     [
+      "<strong><br>Longueur<br><br></strong>",
+      "39,50 m"
+     ],
+     [
+      "<strong><br>Poids maximum au décollage <br><br></strong>",
+      "79 015 kg"
+     ],
+     [
+      "<strong><br>Portée maximale<br><br></strong>",
+      "5 449 km"
+     ],
+     [
+      "<strong><br>Capacité en carburant<br></strong>",
+      "26 035 L"
+     ]
+    ]
+   }
+  ]
+ },
+ "/tg/fr/fly/fleet/boeing-737-max": {
+  "title": "B-737-MAX",
+  "crumbs": [
+   "Voyagez",
+   "Flotte"
+  ],
+  "crumbLinks": [
+   "/tg/fr/fly",
+   "/tg/fr/fly/fleet"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "img",
+    "src": "/img/pages/boeing-737-max.jpg",
+    "alt": "WhatsApp-Image-2023-09-01-at-5-39-53-PM-1-.jpeg"
+   },
+   {
+    "t": "h",
+    "text": "Boeing 737 MAX"
+   },
+   {
+    "t": "table",
+    "rows": [
+     [
+      "<strong>Cabine map<br></strong>",
+      ""
+     ],
+     [
+      "<strong><br>Capacity (passengers)<br><br><br></strong>",
+      "160<br>16C/144Y"
+     ],
+     [
+      "<strong><br>Length<br><br></strong>",
+      "32,30 m"
+     ],
+     [
+      "<strong><br>Operating weight empty<br><br></strong>",
+      "10 886 kg"
+     ],
+     [
+      "<strong><br>Maximum take off weight <br><br></strong>",
+      "65 750 kg"
+     ],
+     [
+      "<strong><br>Maximum landing weight<br><br></strong>",
+      "80 300kg"
+     ],
+     [
+      "<strong><br>Maximum range<br><br></strong>",
+      "7 080 km"
+     ],
+     [
+      "<strong><br>Fuel capacity<br></strong>",
+      "25 941 L"
+     ]
+    ]
+   }
+  ]
+ },
+ "/tg/fr/fly/fleet/modern-aircrafts": {
+  "title": "Modern aircrafts",
+  "crumbs": [
+   "Voyagez",
+   "Flotte"
+  ],
+  "crumbLinks": [
+   "/tg/fr/fly",
+   "/tg/fr/fly/fleet"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "Une flotte moderne"
+   },
+   {
+    "t": "p",
+    "html": "Pour assurer à ses clients un transport aérien efficace, régulier et sûr, ASKY a fait le choix stratégique d'opérer avec des avions neufs ou presque neufs."
+   },
+   {
+    "t": "p",
+    "html": "Sa flotte se compose maintenant de :"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "Neuf Boeing 737-800, équipé de 154 sièges (16 en classe affaires et 138 en classe économique)"
+    ]
+   },
+   {
+    "t": "ul",
+    "items": [
+     "Six Boeing 737-MAX, équipé de 160 sièges (16 sièges en classe affaire et 144 sièges en classe économique)"
+    ]
+   }
+  ]
+ },
+ "/tg/fr/fly/network": {
+  "title": "Network",
+  "crumbs": [
+   "Voyagez"
+  ],
+  "crumbLinks": [
+   "/tg/fr/fly"
+  ],
+  "children": [
+   [
+    "/tg/fr/fly/network/international",
+    "International"
+   ]
+  ],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/fly/network/international": {
+  "title": "International",
+  "crumbs": [
+   "Voyagez",
+   "Réseau"
+  ],
+  "crumbLinks": [
+   "/tg/fr/fly",
+   "/tg/fr/fly/network"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "Le réseau"
+   },
+   {
+    "t": "p",
+    "html": "Le réseau ASKY couvre actuellement 30 destinations à travers 28 pays d’Afrique de l’Ouest, du Centre, de l'Est et du Sud. ASKY opère actuellement 336 vols hebdomadaires sur ce réseau avec une moyenne de 24 000 passagers transportés par semaine."
+   },
+   {
+    "t": "p",
+    "html": "Ce réseau est construit autour de son hub de Lomé qui s’impose progressivement comme un hub régional. Le hub de Lomé offre la position stratégique d’être pratiquement à mi-chemin entre l’Afrique de l’Ouest, l’Afrique Centrale, de l'Est et du Sud offrant ainsi une parfaite interconnexion entre les quatres régions."
+   },
+   {
+    "t": "p",
+    "html": "Le réseau ASKY est connecté à celui de son partenaire stratégique : Ethiopian Airlines et les horaires sont aménagés de sorte à permettre aux passagers de bénéficier, au départ de Lomé, le reste du monde avec Ethiopian Airlines"
+   }
+  ]
+ },
+ "/tg/fr/plan/essentials": {
+  "title": "Fondamentaux",
+  "crumbs": [
+   "Planifiez"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan"
+  ],
+  "children": [
+   [
+    "/tg/fr/plan/essentials/luggage",
+    "Bagages"
+   ],
+   [
+    "/tg/fr/plan/essentials/animals",
+    "Animaux"
+   ],
+   [
+    "/tg/fr/plan/essentials/forbidden-goods",
+    "Marchandises interdites"
+   ],
+   [
+    "/tg/fr/plan/essentials/permitted-goods",
+    "Marchandises autorisées"
+   ]
+  ],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/plan/essentials/animals": {
+  "title": "Animaux",
+  "crumbs": [
+   "Planifiez",
+   "Fondamentaux"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/essentials"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "img",
+    "src": "/img/pages/en-animaux.jpg",
+    "alt": "flyasky-asky-en-animaux.jpg"
+   },
+   {
+    "t": "h",
+    "text": "Animaux"
+   },
+   {
+    "t": "p",
+    "html": "Vous pouvez voyager avec votre animal familier. ASKY transporte les animaux en cabine ou en soute selon leur poids et leur taille et sous certaines conditions."
+   },
+   {
+    "t": "p",
+    "html": "Prenez contact avec votre agence de voyages ou avec nos services de réservation, <em>au plus tard 48 heures avant</em> votre départ, afin d’obtenir les informations relatives à ces conditions de transport."
+   },
+   {
+    "t": "p",
+    "html": "Pour savoir s’il peut voyager en cabine ou en soute, il est impératif de signaler la présence de votre animal lors de la réservation."
+   },
+   {
+    "t": "p",
+    "html": "Rapprochez-vous de l’ambassade du pays de destination pour connaître les formalités à remplir (vaccination, quarantaine etc.)."
+   },
+   {
+    "t": "p",
+    "html": "Les documents de voyage de votre animal doivent être en règle avant son départ.<br>• Pour que votre animal voyage en toute tranquillité, nous vous recommandons de lui administrer, sur avis d’un vétérinaire, un produit susceptible de lui éviter le mal de l’air ou toute réaction intempestive pendant le vol ;<br>• Pour éviter toute mauvaise surprise, pensez à vous renseigner sur les réglementations en vigueur dans les pays d’origine et d’arrivée (vaccinations, quarantaine...)."
+   },
+   {
+    "t": "p",
+    "html": "Les dispositions en vigueur en matière de protection des animaux et les règles d’importation et d’exportation des pays concernés doivent être respectées."
+   },
+   {
+    "t": "p",
+    "html": "Des conditions de transport particulières s’appliquent à certaines races de chiens."
+   }
+  ]
+ },
+ "/tg/fr/plan/essentials/forbidden-goods": {
+  "title": "Forbidden goods",
+  "crumbs": [
+   "Planifiez",
+   "Fondamentaux"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/essentials"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "p",
+    "html": "Marchandises dangereuses interdites dans vos bagages enregistrés et en cabine"
+   },
+   {
+    "t": "p",
+    "html": "Pour des raisons de sécurité et conformément aux réglementations internationales applicables, les articles dangereux tels que ceux énumérés ci-dessous ne doivent pas être transportés dans vos bagages enregistrés et à main (cabine) sauf dans les cas spécifiquement autorisés."
+   },
+   {
+    "t": "p",
+    "html": "•Explosifs, munitions, feux d'artifice, fusées éclairantes ;<br>•Mallettes et attaché-cases de sécurité, caisses, etc. Incorporant des marchandises dangereuses, telles que des piles au lithium et/ou du matériel pyrotechnique ;<br>•Gaz (inflammables, ininflammables, réfrigérés en profondeur et toxiques) tels que les gaz de camping et les aérosols ;<br>• Liquides inflammables tels que les carburants plus légers, les peintures et les diluants ;<br>•Matières solides inflammables telles que les allumettes et autres articles facilement inflammables ; substances sujettes à l'inflammation spontanée; substances qui, au contact de l'eau, dégagent des gaz inflammables;<br>•Des substances oxydantes telles que des poudres décolorantes et des peroxydes ;<br>•Les substances vénéneuses (toxiques) et infectieuses, telles que l'arsenic, le cyanure, les insecticides, les désherbants, les bactéries et les virus ;<br>•Matériaux et articles radioactifs ;<br>•Corrosifs (tels que le mercure qui peut être contenu dans les thermomètres, les acides, les alcalis et les piles humides) ;<br>•Matériaux magnétisés et marchandises dangereuses diverses ;<br>•Dispositifs invalidants contenant des substances irritantes ou incapacitantes telles que gaz lacrymogène et muscade ou spray au poivre ;<br>•Armes à électrochocs, telles que les Tasers, contenant des marchandises dangereuses telles que des explosifs, des gaz comprimés, des batteries au lithium, etc. ;<br>•Batteries et appareils renversables, équipements avec batteries renversables ;<br>•Dispositifs médicaux personnels à oxygène utilisant de l'oxygène liquide ;<br>•Votre propre bouteille d'oxygène à usage médical."
+   }
+  ]
+ },
+ "/tg/fr/plan/essentials/luggage": {
+  "title": "Bagages",
+  "crumbs": [
+   "Planifiez",
+   "Fondamentaux"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/essentials"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "p",
+    "html": "Consultez les tarifs des bagages"
+   },
+   {
+    "t": "p",
+    "html": "Bien connaître vos bagages peut faire toute la différence pour votre voyage. Comme vous n'aurez pas accès à vos bagages enregistrés pendant le vol, nous vous recommandons de garder vos objets de valeur, vos objets fragiles, votre argent et vos documents importants avec vous en cabine."
+   },
+   {
+    "t": "p",
+    "html": "Tout objet considéré comme dangereux dans vos bagages sera retiré lors des contrôles de sécurité."
+   },
+   {
+    "t": "p",
+    "html": "Pour des raisons de sécurité aérienne, les liquides en cabine sont strictement réglementés et doivent être autorisés."
+   },
+   {
+    "t": "p",
+    "html": "Conservez vos documents de voyage dans votre bagage à main et, pour faciliter l'identification de vos bagages, veillez à les étiqueter avec vos coordonnées complètes (nom, prénom, adresse, numéro de téléphone et e-mail)."
+   },
+   {
+    "t": "p",
+    "html": "Depuis le 1er septembre 2022, ASKY vous propose les conditions suivantes pour vos bagages :"
+   },
+   {
+    "t": "p",
+    "html": "Bagages à main"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "Classe affaires : 10 kg",
+     "Classe économique : 7 kg"
+    ]
+   },
+   {
+    "t": "p",
+    "html": "Bagages en Soute"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "Classe affaires : deux bagages de 32 kg chacun",
+     "Classe économique : deux bagages de 23 kg chacun"
+    ]
+   },
+   {
+    "t": "p",
+    "html": "Les membres du club ASKY bénéficient d'une franchise de bagages supplémentaire en fonction de leur niveau."
+   },
+   {
+    "t": "table",
+    "rows": [
+     [
+      "Niveau",
+      "<strong>Economique</strong>",
+      "<strong>Affaire</strong>"
+     ],
+     [
+      "Brown",
+      "NUL",
+      "NUL"
+     ],
+     [
+      "Silver",
+      "1 bagage de 23 kg",
+      "1 bagage de 23 kg"
+     ],
+     [
+      "Gold",
+      "1 bagage de 32 kg",
+      "1 bagage de 32 kg"
+     ],
+     [
+      "Black",
+      "1 bagage de 32 kg<strong> or 2</strong> bagages de 23 kg",
+      "1 bagage de 32 kg<strong> or 2</strong> bagages de 23 kg"
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "html": "Au-delà de votre franchise de bagages, les frais de bagages supplémentaires doivent être réglés au comptoir ASKY de l'aéroport lors de l'enregistrement."
+   },
+   {
+    "t": "h",
+    "text": "POLITIQUE SPÉCIALE RELATIVE AUX BAGAGES"
+   },
+   {
+    "t": "p",
+    "html": "Nous comprenons que certains articles nécessitent une attention particulière lors d'un voyage. Que vous envisagiez d'emporter du matériel de sport, des armes, des bagages hors gabarit, des instruments de musique ou des animaux de compagnie, nous sommes là pour vous aider. Des instructions détaillées sur la prise en charge du matériel de sport et des bagages hors gabarit aux consignes relatives au transport d'armes, d'instruments de musique et d'animaux de compagnie, cette section vous fournit toutes les informations essentielles pour un voyage sans encombre."
+   },
+   {
+    "t": "p",
+    "html": "<strong>Remarque générale :</strong><br>- Tous les articles spéciaux énumérés ci-dessous sont considérés comme faisant partie de la franchise de bagages, à condition que le passager ne dépasse pas sa franchise<br>- Les instruments de musique sont autorisés en cabine en tant que bagages à main, à condition que les dimensions de l'instrument (à l'intérieur ou à l'extérieur de son emballage) ne dépassent pas les normes de dimensions des bagages à main fixées par la compagnie aérienne.<br>- Le service de bagages sur siège garantit aux passagers le transport en toute sécurité des bagages fragiles ou volumineux qui ne doivent pas être enregistrés ou transportés en soute. Ce service permet aux passagers de réserver un siège pour ces articles, conformément aux procédures de réservation habituelles. Dans le cas contraire, des frais de manutention s'appliquent pour le chargement en tant que bagages enregistrés.<br>- Les frais de manutention ne sont facturés que pour les précautions supplémentaires requises lors de la manipulation de l'article, et les articles doivent être étiquetés « Article fragile »."
+   },
+   {
+    "t": "p",
+    "html": "<strong>Frais de manutention</strong><br>- Les prix indiqués ci-dessous sont exprimés en USD, mais peuvent être perçus en monnaie locale à l'aéroport de départ.<br>- Ces tarifs s'appliquent uniquement aux vols opérés par KP."
+   },
+   {
+    "t": "p",
+    "html": "Tout téléviseur de plus de 65 pouces sera transporté en tant que fret, conformément à la réglementation applicable en matière de fret."
+   },
+   {
+    "t": "p",
+    "html": "Frais pour les articles spéciaux : équipement sportif, instruments de musique et téléviseurs"
+   },
+   {
+    "t": "h",
+    "text": "Special Items Charges: Sports equipment, musical instruments, and TV"
+   },
+   {
+    "t": "table",
+    "rows": [
+     [
+      "Articles",
+      "Frais (USD)"
+     ],
+     [
+      "Instruments de musique",
+      "100"
+     ],
+     [
+      "Tableaux ou sculptures",
+      "100"
+     ],
+     [
+      "Porcelaine / Verre / Céramique",
+      "100"
+     ],
+     [
+      "Équipement de golf",
+      "100"
+     ],
+     [
+      "Vélo (non motorisé",
+      "100"
+     ],
+     [
+      "Équipement de pêche",
+      "100"
+     ],
+     [
+      "Équipement de tennis",
+      "100"
+     ],
+     [
+      "TV (32\" – 54\")",
+      "90"
+     ],
+     [
+      "TV (55\" – 65\")",
+      "100"
+     ],
+     [
+      "TV (32\" – 54\") à destination/en provenance de JNB/LAD/NBO",
+      "110"
+     ],
+     [
+      "TV (55\" – 65\") à destination/en provenance de JNB/LAD/NBO",
+      "120"
+     ]
+    ]
+   },
+   {
+    "t": "h",
+    "text": "Transport d'animaux de compagnie (PETC / AVIH)"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "Les chats et les chiens, tels que définis dans les tarifs passagers en vigueur, peuvent être transportés en cabine ou en soute lorsqu'ils sont placés dans une cage et accompagnés d'un passager, ou expédiés en tant que fret.",
+     "Vous devez transporter votre animal de compagnie dans une cage ne dépassant pas 55 x 40 x 20 cm et 7 kg (cage comprise). Si les dimensions ou le poids sont supérieurs, l'animal doit être transporté en soute.",
+     "Si la cage est plus grande que la taille autorisée pour le transport en cabine, ou si le poids total (animal + cage) est supérieur à 7 kg et inférieur ou égal à 32 kg, l'animal sera transporté en soute.",
+     "Les animaux de compagnie (cage comprise) pesant plus de 32 kg doivent être transportés en soute, conformément aux procédures applicables au fret.",
+     "Vous devez préciser le type d'animal et la taille de la cage lors de la réservation.",
+     "Les frais liés au transport d'animaux de compagnie en cabine ou en soute sont facturés au tarif des excédents de bagages, indépendamment de la franchise de bagages.",
+     "Pour les vols en partage de code, les règles de la compagnie aérienne opérant le vol s'appliquent.",
+     "Les animaux de compagnie de plus de 32 kg doivent être transportés en soute",
+     "Pour les itinéraires comprenant des vols ET, les règles de bagages d'Ethiopian Airlines (règle des 32 kg) s'appliquent."
+    ]
+   },
+   {
+    "t": "table",
+    "rows": [
+     [
+      "Categorie",
+      "Poids",
+      "Frais (USD)"
+     ],
+     [
+      "PETC (en cabine)",
+      "Jusqu’à 7 kg",
+      "60"
+     ],
+     [
+      "AVIH (en soute)",
+      "8 kg – 23 kg",
+      "205"
+     ],
+     [
+      "AVIH (e soute)",
+      "24 kg – 32 kg",
+      "285"
+     ]
+    ]
+   }
+  ]
+ },
+ "/tg/fr/plan/essentials/permitted-goods": {
+  "title": "Dangerous goods permitted",
+  "crumbs": [
+   "Planifiez",
+   "Fondamentaux"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/essentials"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "p",
+    "html": "Marchandises dangereuses autorisées en cabine et bagages enregistrés"
+   },
+   {
+    "t": "p",
+    "html": "Aérosols de la division 2.2, sans risque subsidiaire, à usage sportif ou domestique.<br>Permis:<br>•Dans les bagages enregistrés ;"
+   },
+   {
+    "t": "p",
+    "html": "Articles médicinaux ou de toilette non radioactifs (y compris les aérosols) tels que les laques pour les cheveux, les parfums, les eaux de Cologne et les médicaments contenant de l'alcool.<br>Permis:<br>• Dans les bagages enregistrés<br>• Dans les bagages à main<br>• Sur sa personne<br>Noter<br>La quantité nette totale de tous les articles mentionnés ci-dessus ne doit pas dépasser 2 kg ou 2 L, et la quantité nette de chaque article ne doit pas dépasser 0,5 kg ou 0,5 L. Les soupapes de décharge sur les aérosols doivent être protégées par un capuchon ou d'autres moyens appropriés pour empêcher la diffusion accidentelle du contenu."
+   },
+   {
+    "t": "p",
+    "html": "Ampoules écoénergétiques lorsqu'elles sont dans des emballages de vente au détail destinés à un usage personnel ou domestique.<br>Permis:<br>• Dans les bagages enregistrés<br>• Dans les bagages à main<br>• Sur sa personne"
+   },
+   {
+    "t": "p",
+    "html": "Bigoudis contenant des hydrocarbures gazeux, pas plus d'un (1) par passager ou membre d'équipage, à condition que le couvercle de sécurité soit solidement fixé sur l'élément chauffant. Ces bigoudis ne doivent en aucun cas être utilisés à bord de l'avion.<br>Permis:<br>• Dans les bagages enregistrés<br>• Dans les bagages à main"
+   },
+   {
+    "t": "p",
+    "html": "Les recharges de gaz pour ces bigoudis ne sont pas autorisées dans les bagages enregistrés ou à main.<br>Dioxyde de carbone, solide (glace sèche) en quantités n'excédant pas 2,5 kg par passager lorsqu'il est utilisé pour emballer des denrées périssables non soumises à ces réglementations dans les bagages à main, à condition que le colis permette la libération de dioxyde de carbone.<br>Permis:<br>• Dans les bagages enregistrés<br>• Dans les bagages à main<br>• Approbation d'ASKY"
+   },
+   {
+    "t": "p",
+    "html": "Emballage isotherme contenant de l'azote liquide réfrigéré (expéditeur sec), entièrement absorbé dans un matériau poreux ne contenant que des marchandises non dangereuses.<br>Permis:<br>• Dans les bagages enregistrés<br>• Dans les bagages à main"
+   },
+   {
+    "t": "p",
+    "html": "Thermomètre médical ou clinique, qui contient du mercure, un (1) par personne pour usage personnel, lorsqu'il est dans son étui protecteur.<br>Permis:<br>• Dans les bagages enregistrés<br>• Dans les bagages à main<br>• Sur sa personne"
+   },
+   {
+    "t": "p",
+    "html": "Bouteilles de gaz non inflammables et non toxiques portées pour le fonctionnement des membres mécaniques. Aussi, des cylindres de rechange de taille similaire si nécessaire pour assurer un approvisionnement adéquat pour la durée du voyage.<br>Permis:<br>• Dans les bagages enregistrés<br>• Dans les bagages à main<br>Sur sa personne"
+   },
+   {
+    "t": "p",
+    "html": "Boissons alcoolisées, lorsqu'elles sont conditionnées dans des emballages de vente au détail, contenant plus de 24 % mais pas plus de 70 % d'alcool par volume, dans des récipients n'excédant pas 5 L, avec une quantité nette totale par personne de 5 L (24 % ou moins ne sont soumis à aucune restrictions).<br>Permis:<br>• Dans les bagages enregistrés<br>• Dans les bagages à main<br>• Sur sa personne"
+   },
+   {
+    "t": "p",
+    "html": "Appareils électroniques portables contenant des piles ou des batteries au lithium métal ou lithium-ion, tels que montres, machines à calculer, appareils photo, téléphones portables, ordinateurs portables, caméscopes, etc., lorsqu'ils sont transportés par les passagers ou l'équipage pour un usage personnel.<br>Permis:<br>• dans les bagages enregistrés<br>dans les bagages à main<br>• sur sa personne"
+   },
+   {
+    "t": "p",
+    "html": "Toutes les batteries de rechange, y compris les piles ou batteries au lithium métal ou au lithium ionique, pour ces appareils électroniques portables doivent être transportées uniquement dans les bagages à main. Ces batteries doivent avoir des bornes isolées pour éviter les courts-circuits.<br>Permis:<br>• Dans les bagages à main<br>• sur sa personne"
+   },
+   {
+    "t": "p",
+    "html": "Appareils électroniques portables contenant des piles non renversables. L'équipement doit être protégé contre l'auto-implication et court-circuiter la batterie. Les batteries doivent être de 12 V ou moins et de 100 Wh ou moins. Un maximum de 2 batteries de rechange sont autorisées dont les bornes doivent être isolées pour éviter les courts-circuits.<br>Permis:<br>• dans les bagages enregistrés<br>• dans les bagages à main"
+   },
+   {
+    "t": "p",
+    "html": "Stimulateurs cardiaques radio-isotopiques ou autres dispositifs, y compris ceux alimentés par des piles au lithium, implantés dans une personne, ou produits radiopharmaceutiques contenus dans le corps d'une personne à la suite d'un traitement médical.<br>Permis:<br>• Sur sa personne"
+   },
+   {
+    "t": "p",
+    "html": "Allumettes de sûreté (un petit paquet) ou un briquet qui ne contient pas de carburant liquide non absorbé autre que du gaz liquéfié destiné à être utilisé par un individu lorsqu'il est transporté sur la personne. Le carburant plus léger et les recharges de briquet ne sont pas autorisés sur sa personne ni dans l'enregistrement ou le transport -sur les bagages.<br>Frappez partout où les matchs sont interdits pour le transport aérien.<br>Permis:<br>• Sur sa personne"
+   },
+   {
+    "t": "p",
+    "html": "Le carburant pour briquet et les recharges pour briquet ne sont pas autorisés sur sa personne ou dans les bagages enregistrés ou à main."
+   },
+   {
+    "t": "p",
+    "html": "Remarque : les allumettes « Frappez n'importe où », les briquets « flamme bleue » ou « cigares » sont interdits."
+   },
+   {
+    "t": "p",
+    "html": "Marchandises dangereuses que vous pouvez transporter avec l'approbation du transporteur<br>Munitions (cartouches pour armes), solidement emballées (uniquement dans la Div. 1.4S, UN 0012 ou UN 0014, à l'exclusion de celles contenant des projectiles explosifs ou incendiaires) en quantités n'excédant pas 5 kg de poids brut par personne pour son propre usage. Les allocations pour plus d'une personne ne doivent pas être combinées en un ou plusieurs forfaits.<br>Permis:<br>• Dans les bagages enregistrés<br>• Approbation d'ASKY"
+   },
+   {
+    "t": "p",
+    "html": "Fauteuils roulants ou autres appareils de mobilité alimentés par batterie avec des batteries non renversables, à condition que la batterie soit déconnectée, que les bornes de la batterie soient isolées pour éviter les courts-circuits accidentels et que la batterie soit solidement fixée au fauteuil roulant ou à l'appareil de mobilité.<br>Permis:<br>• En tant que bagage enregistré<br>• Approbation d'ASKY"
+   },
+   {
+    "t": "p",
+    "html": "Fauteuils roulants alimentés par batterie ou autres appareils de mobilité avec des batteries sèches.<br>Permis:<br>• En tant que bagage enregistré"
+   },
+   {
+    "t": "p",
+    "html": "Fauteuils roulants alimentés par batterie ou autres appareils de mobilité avec des batteries au lithium.<br>Permis:<br>Comme bagage enregistré<br>• Approbation d'ASKY<br>• Le capitaine doit être informé de l'emplacement"
+   },
+   {
+    "t": "p",
+    "html": "Aides à la mobilité alimentées par batterie avec batteries lithium-ion (pliables). La batterie lithium-ion doit être retirée des aides à la mobilité.<br>Aides à la mobilité et batteries lithium-ion autorisées :<br>• Dans les bagages à main<br>• Approbation d'ASKY<br>• Le capitaine doit être informé de l'emplacement"
+   },
+   {
+    "t": "p",
+    "html": "Équipement alimenté par batterie lithium-ion contenant des batteries de plus de 100 Wh mais n'excédant pas 160 Wh.<br>Permis:<br>• Dans les bagages enregistrés<br>• Dans les bagages à main<br>• Sur sa personne<br>• Approbation d'ASKY"
+   },
+   {
+    "t": "p",
+    "html": "Batteries de rechange au lithium-ion d'une puissance nominale en watts-heure supérieure à 100 Wh mais n'excédant pas 160 Wh pour les appareils électroniques grand public. Un maximum de deux batteries de rechange peut être transporté dans les bagages à main uniquement. Ces batteries doivent être protégées individuellement pour éviter les courts-circuits.<br>Permis:<br>• Dans les bagages à main<br>• Sur sa personne<br>• Approbation d'ASKY"
+   },
+   {
+    "t": "p",
+    "html": "Baromètre ou thermomètre à mercure porté par un représentant d'un bureau météorologique gouvernemental ou d'un organisme officiel similaire. Ils doivent être emballés dans un emballage extérieur solide, muni d'une doublure intérieure scellée ou d'un sac ou d'un matériau solide étanche aux fuites et à la perforation, imperméable au mercure, qui empêchera la fuite de mercure de l'emballage quelle que soit sa position.<br>Permis:<br>• Dans les bagages à main<br>• Approbation d'ASKY<br>• Le capitaine doit être informé de l'emplacement"
+   },
+   {
+    "t": "p",
+    "html": "Sac à dos de sauvetage en cas d'avalanche, un (1) par personne, contenant une bouteille de gaz comprimé en Div. 2.2. Peut également être équipé d'un mécanisme de déclenchement pyrotechnique contenant moins de 200 mg net d'explosifs Div. 1.4S et bouteille de gaz comprimé n'excédant pas 250 ml. Le sac à dos doit être emballé de telle manière qu'il ne puisse pas être activé accidentellement. Les airbags contenus dans les sacs à dos doivent être équipés de soupapes de surpression.<br>Permis:<br>• Dans les bagages enregistrés<br>• Dans les bagages à main<br>• Approbation d'ASKY"
+   },
+   {
+    "t": "p",
+    "html": "Articles produisant de la chaleur, c'est-à-dire des équipements fonctionnant sur batterie tels que des torches sous-marines (lampes de plongée) et des fers à souder, qui, s'ils sont activés accidentellement, généreront une chaleur extrême et peuvent provoquer un incendie. Le composant produisant de la chaleur, ou la source d'énergie, doit être retiré afin d'éviter un fonctionnement intempestif pendant le transport.<br>Permis:<br>• Dans les bagages enregistrés<br>• Dans les bagages à main<br>Approbation d'ASKY"
+   },
+   {
+    "t": "p",
+    "html": "Les petites bouteilles d'oxygène gazeux ou d'air requises pour un usage médical, mais pas pour une utilisation en vol, doivent être transportées dans un emballage extérieur approuvé par le fabricant pour la protection de la soupape de sortie, volume net max. 2 litres et pression max 200 bar par bouteille.<br>Permis:<br>• Dans les bagages à main<br>• Dans les bagages enregistrés<br>• Approbation d'ASKY<br>• Le capitaine doit être informé de l'emplacement<br>Noter:<br>Si vous avez besoin d'oxygène supplémentaire pour des raisons médicales, pendant le vol, vous ne pouvez pas utiliser votre propre bouteille d'oxygène."
+   },
+   {
+    "t": "p",
+    "html": "Appareils électroniques médicaux portables (défibrillateurs externes automatisés (DEA), nébuliseur, pression positive continue (CPAP), etc.) contenant des piles ou des batteries au lithium métal ou au lithium-ion.<br>Permis:<br>• Dans les bagages à main<br>• Sur sa personne<br>• Approbation d'ASKY"
+   },
+   {
+    "t": "p",
+    "html": "<strong>ACCEPTATION DES PASSAGERS AVEC BATTERIES AU LITHIUM, BATTERIES DE RECHANGE ET BATTERIES EXTERNES (POWER BANKS)</strong>"
+   },
+   {
+    "t": "p",
+    "html": "Suite à la mise en œuvre de l'Addendum n° 1 à l'édition 2025–2026 des Instructions techniques de l'OACI (Doc 9284), applicable à compter du 27 mars 2026, des restrictions supplémentaires s'appliquent aux batteries externes et aux batteries au lithium de rechange. L'OACI a également encouragé les exploitants à mener une promotion efficace de la sécurité afin d'assurer la sensibilisation et la conformité des passagers."
+   },
+   {
+    "t": "p",
+    "html": "La présente instruction renforce les exigences précédemment communiquées par ASKY et établit les contrôles opérationnels à appliquer par les prestataires de services d'assistance en escale (GHSP) lors de l'enregistrement et de l'embarquement des passagers. Elle doit être lue conjointement avec le Manuel de réglementation des marchandises dangereuses (DGR) de l'IATA en vigueur, le chapitre 13.1 du Manuel d'assistance en escale d'ASKY et les exigences réglementaires applicables."
+   },
+   {
+    "t": "h",
+    "text": "1. CLASSIFICATION DES BATTERIES EXTERNES (POWER BANKS)"
+   },
+   {
+    "t": "p",
+    "html": "Les batteries externes sont considérées comme des batteries au lithium de rechange lorsqu'elles sont transportées par des passagers ou des membres d'équipage dans le but d'alimenter des appareils électroniques portables. Elles sont soumises aux restrictions applicables aux marchandises dangereuses."
+   },
+   {
+    "t": "h",
+    "text": "2. EXIGENCES OBLIGATOIRES DE TRANSPORT"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "<strong>Transport exclusif en cabine :</strong> Les batteries externes et les batteries au lithium de rechange doivent être transportées uniquement dans les bagages à main ou sur soi.",
+     "<strong>Interdiction en soute :</strong> Elles ne doivent <strong>EN AUCUN CAS</strong> être placées dans les bagages enregistrés.",
+     "<strong>Protection contre les courts-circuits :</strong> Chaque batterie doit être protégée individuellement contre les courts-circuits, par exemple en conservant l'emballage de vente d'origine, en isolant les bornes exposées ou en plaçant chaque batterie dans une pochette de protection ou un sac en plastique séparé.",
+     "<strong>Limite de quantité :</strong> Un passager ne peut transporter plus de deux (2) batteries externes.",
+     "<strong>Conformité aux capacités :</strong> Les batteries externes doivent respecter les limites de capacité/énergie de batterie au lithium applicables et les autres conditions du DGR de l'IATA en vigueur.",
+     "<strong>Articles endommagés :</strong> Les batteries/batteries externes endommagées, défectueuses, gonflées, présentant des fuites ou autrement dangereuses ne doivent pas être acceptées au transport."
+    ]
+   },
+   {
+    "t": "h",
+    "text": "3. UTILISATION ET STOCKAGE À BORD"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "<strong>Interdiction de recharge :</strong> Les batteries externes ne doivent pas être rechargées à bord de l'aéronef.",
+     "<strong>Interdiction d'utilisation :</strong> Les batteries externes ne doivent pas être utilisées pour recharger des appareils électroniques portables pendant qu'elles se trouvent à bord de l'aéronef.",
+     "<strong>Règles de rangement :</strong> Par mesure de sécurité propre à ASKY, les passagers doivent garder les batteries externes accessibles et ne pas les placer dans le coffre à bagages supérieur ; dans la mesure du possible, elles doivent être conservées dans la pochette du siège, sous le siège avant ou dans un autre endroit désigné."
+    ]
+   },
+   {
+    "t": "p",
+    "html": "<strong>4. QUESTIONNAIRE OBLIGATOIRE À L'ENREGISTREMENT / CONTRÔLE DES PASSAGERS"
+   },
+   {
+    "t": "p",
+    "html": "Conformément aux exigences d'application de l'ANAC Togo, le processus d'interrogation/questionnaire passager sur les marchandises dangereuses à l'enregistrement doit être mis à jour pour identifier spécifiquement les batteries au lithium de rechange et les batteries externes. Les questions suivantes doivent être intégrées au contrôle d'enregistrement :"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "<em>Avez-vous des batteries au lithium de rechange ou des batteries externes dans vos bagages ?</em>",
+     "<em>Si OUI, sont-elles transportées dans vos bagages à main ou sur vous ?</em>",
+     "<em>Avez-vous plus de deux (2) batteries externes ?</em>",
+     "<em>Les batteries / batteries externes sont-elles protégées individuellement contre les courts-circuits ?</em>",
+     "<em>L'une des batteries ou batteries externes est-elle endommagée, gonflée, fuit-elle ou présente-t-elle un défaut ?</em>"
+    ]
+   },
+   {
+    "t": "p",
+    "html": "Lorsqu'un passager déclare un article non conforme, l'agent d'enregistrement ne doit pas simplement accepter le bagage. L'article doit être évalué et traité conformément au DGR de l'IATA en vigueur, au chapitre 13.1 du Manuel d'assistance en escale d'ASKY et aux procédures applicables."
+   },
+   {
+    "t": "h",
+    "text": "5. RESPONSABILITÉS DU PERSONNEL D'ENREGISTREMENT ET D'EMBARQUEMENT"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "S'assurer que les passagers sont correctement informés des restrictions applicables.",
+     "Poser les questions relatives aux marchandises dangereuses applicables lors de l'enregistrement.",
+     "Vérifier l'emplacement, la quantité et l'état des batteries externes / batteries de rechange déclarées lorsque cela est requis.",
+     "Empêcher que des batteries externes ou des batteries de rechange non conformes soient acceptées au transport.",
+     "S'assurer que les informations adéquates aux passagers et les annonces de sécurité sont fournies.",
+     "Signaler toute incertitude, non-conformité ou événement lié aux marchandises dangereuses au superviseur responsable et au représentant d'ASKY."
+    ]
+   },
+   {
+    "t": "h",
+    "text": "6. CONTRÔLE À L'EMBARQUEMENT"
+   },
+   {
+    "t": "p",
+    "html": "Le personnel d'embarquement doit rester vigilant quant aux batteries externes et batteries de rechange identifiées ou présentées après l'enregistrement. Tout article suspecté de ne pas être conforme doit être orienté vers le superviseur responsable pour évaluation avant la fin de l'embarquement."
+   },
+   {
+    "t": "h",
+    "text": "7. FORMATION ET MISE EN ŒUVRE"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "Tout le personnel d'enregistrement et d'embarquement doit être briefé sur cette instruction avant sa mise en œuvre.",
+     "Les prestataires d'assistance en escale doivent s'assurer que le questionnaire d'enregistrement mis à jour est disponible et utilisé de manière effective.",
+     "La preuve du briefing/formation et de la mise en œuvre doit être conservée par le prestataire d'assistance en escale.",
+     "Les superviseurs d'escale doivent vérifier la mise en œuvre lors des activités de contrôle en escale."
+    ]
+   },
+   {
+    "t": "h",
+    "text": "8. NOTIFICATION / REPORTING"
+   },
+   {
+    "t": "p",
+    "html": "Tout événement impliquant des batteries au lithium ou des batteries externes interdites, non déclarées, mal transportées, endommagées, en surchauffe ou autrement dangereuses doit être signalé via les canaux d'exploitation et de notification de sécurité applicables d'ASKY."
+   },
+   {
+    "t": "h",
+    "text": "9. CONFORMITÉ"
+   },
+   {
+    "t": "p",
+    "html": "La présente instruction doit être mise en œuvre immédiatement et appliquée conjointement avec le DGR IATA en vigueur et le chapitre 13.1 du Manuel d'assistance en escale d'ASKY. En cas de conflit ou d'incertitude, la question doit être transmise aux opérations au sol / au personnel compétent en marchandises dangereuses d'ASKY avant d'accepter le transport."
+   },
+   {
+    "t": "p",
+    "html": "Cette instruction révisée remplace la communication précédente SKK-GRH-REC-015 émise le 28 mai 2026 et doit être utilisée comme directive opérationnelle actuelle d'ASKY pour les contrôles des batteries au lithium et des batteries externes des passagers."
+   }
+  ]
+ },
+ "/tg/fr/plan/requirements": {
+  "title": "Requirements",
+  "crumbs": [
+   "Planifiez"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan"
+  ],
+  "children": [
+   [
+    "/tg/fr/plan/requirements/formalities",
+    "Formalités"
+   ],
+   [
+    "/tg/fr/plan/requirements/documents",
+    "Documents"
+   ],
+   [
+    "/tg/fr/plan/requirements/covid-19",
+    "COVID-19"
+   ]
+  ],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/plan/requirements/admpolicies": {
+  "title": "admpolicies",
+  "crumbs": [
+   "Planifiez",
+   "Exigences"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/requirements"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "Welcome !"
+   },
+   {
+    "t": "p",
+    "html": "At<strong> ASKY</strong>, we believe in providing you with the most up-to-date and accurate information. To ensure transparency and accessibility, we offer two versions of our document for your convenience. <br>Whether you're looking for the latest updates or need access to a historical version, you'll find everything you need right here.<br> Explore the two versions below and select the one that best suits your needs. <br>Your satisfaction and trust are our top priorities, and we're committed to delivering the information you require in the format that works best for you."
+   },
+   {
+    "t": "p",
+    "html": "-----------------------------------------"
+   },
+   {
+    "t": "p",
+    "html": "French version:<br><a href=\"https://www.flyasky.com/Cms_Data/Contents/ASKY/Media/Misc/kp_adm_fr.pdf\">kp_adm_fr.pdf<br></a><br>English version:<br> <a href=\"https://www.flyasky.com/Cms_Data/Contents/ASKY/Media/Misc/kp_adm_en.pdf\">kp_adm_en.pdf</a>"
+   }
+  ]
+ },
+ "/tg/fr/plan/requirements/documents": {
+  "title": "Documents",
+  "crumbs": [
+   "Planifiez",
+   "Exigences"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/requirements"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "p",
+    "html": "Documents requis pour un enfant non accompagné</strong>"
+   },
+   {
+    "t": "p",
+    "html": "Lors de l'enregistrement, un tour de cou sera remis à votre enfant à porter pendant tout le voyage."
+   },
+   {
+    "t": "p",
+    "html": "Ces documents nécessaires doivent être mis à l'intérieur :"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "Le billet électronique ou l'imprimé de réservation et la notice d'accompagnement *",
+     "Le passeport en cours de validité du mineur*, (valable au moins 6 mois après la date de retour estimée)",
+     "Un visa pour le pays de destination **",
+     "Une preuve d'assurance voyage **",
+     "Une attestation d'allergie éventuellement ***",
+     "Le reçu pour les frais de service déjà payés *",
+     "L'autorisation des représentants légaux du mineur indiquant qu'il peut voyager seul **",
+     "Le formulaire d'accompagnement que vous remplissez à l'aéroport."
+    ]
+   },
+   {
+    "t": "p",
+    "html": "* Obligatoire dans tous les cas<br>** Selon pays de destination<br>*** Conseillé"
+   }
+  ]
+ },
+ "/tg/fr/plan/requirements/formalities": {
+  "title": "Formalités",
+  "crumbs": [
+   "Planifiez",
+   "Exigences"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/requirements"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "img",
+    "src": "/img/pages/fr-formalites.jpg",
+    "alt": "flyasky-asky-fr-formalites.jpg"
+   },
+   {
+    "t": "h",
+    "text": "Formalités"
+   },
+   {
+    "t": "h",
+    "text": "Immigration"
+   },
+   {
+    "t": "p",
+    "html": "Avant tout voyage à l’étranger, il est de la responsabilité des passagers de vérifier auprès de l’ambassade ou du consulat du (des) pays de destination, les formalités d’entrée et de séjour, la nature des pièces d’identité exigées et leur date de validité."
+   },
+   {
+    "t": "p",
+    "html": "Attention, les délais d’obtention de certains documents peuvent nécessiter plusieurs mois."
+   },
+   {
+    "t": "p",
+    "html": "<strong>Douanes</strong><br>Des produits (alimentaires ou d’équipement) sont interdits d’entrée sur certains territoires. Renseignez-vous auprès du service consulaire ou de l’office du tourisme de votre pays de destination. L’importation et l’exportation de produits de contrefaçon constituent un délit douanier."
+   }
+  ]
+ },
+ "/tg/fr/plan/services": {
+  "title": "Services",
+  "crumbs": [
+   "Planifiez"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan"
+  ],
+  "children": [
+   [
+    "/tg/fr/plan/services/family-and-groups",
+    "Famille et groupe"
+   ],
+   [
+    "/tg/fr/plan/services/on-ground",
+    "Services au sol"
+   ],
+   [
+    "/tg/fr/plan/services/on-board",
+    "Services à bord"
+   ],
+   [
+    "/tg/fr/plan/services/after-landing",
+    "Après l'atterrissage"
+   ]
+  ],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/plan/services/after-landing": {
+  "title": "After landing",
+  "crumbs": [
+   "Planifiez",
+   "Services"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/services"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "h",
+    "text": "Après l'atterrissage"
+   },
+   {
+    "t": "p",
+    "html": "Le personnel d'ASKY accueillera votre enfant (enfant non accompagné) à son arrivée à l'aéroport et l'accompagnera ses proches. Si le trajet comporte un ou plusieurs arrêts, votre enfant sera assisté pendant les temps de transit.<br>En cas de retard, les proches du mineur seront informés par téléphone de la nouvelle heure d'arrivée. Ils doivent fournir les pièces d'identité et toutes les justifications requises avant d'accompagner le mineur"
+   }
+  ]
+ },
+ "/tg/fr/plan/services/family-and-groups": {
+  "title": "Family and group",
+  "crumbs": [
+   "Planifiez",
+   "Services"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/services"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "img",
+    "src": "/img/pages/fr-famille-et-groupe.jpg",
+    "alt": "flyasky-asky-fr-famille-et-groupe.jpg"
+   },
+   {
+    "t": "h",
+    "text": "Partir en famille ou en groupe"
+   },
+   {
+    "t": "h",
+    "text": "Vous voyagez en famille ou en groupe ?"
+   },
+   {
+    "t": "p",
+    "html": "Nous mettons tout en œuvre pour que votre voyage soit un vrai moment de plaisir : sièges groupés, confort à bord, etc."
+   },
+   {
+    "t": "h",
+    "text": "Voyager avec un bébé"
+   },
+   {
+    "t": "p",
+    "html": "Vous pouvez voyager avec votre nouveau-né âgé de 7 jours minimum. Jusqu'à l'âge de moins de 2 ans, les bébés n'occupant pas de siège bénéficient de 90% de réduction sur le tarif applicable."
+   },
+   {
+    "t": "p",
+    "html": "Des berceaux ne sont pas encore disponibles sur les vols ASKY."
+   },
+   {
+    "t": "h",
+    "text": "Voyager avec un enfant"
+   },
+   {
+    "t": "p",
+    "html": "Un enfant, jusqu'à 11 ans inclus, doit être accompagné par un adulte âgé de 18 ans ou plus.<br>Quand ils sont accompagnés d'un adulte, les enfants bénéficient de réductions pouvant aller jusqu'à 25% de réduction sur le tarif applicable."
+   }
+  ]
+ },
+ "/tg/fr/plan/services/on-board": {
+  "title": "On board",
+  "crumbs": [
+   "Planifiez",
+   "Services"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/services"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "img",
+    "src": "/img/pages/en-services-a-bord.jpg",
+    "alt": "flyasky-asky-en-services-a-bord.jpg"
+   },
+   {
+    "t": "h",
+    "text": "A bord"
+   },
+   {
+    "t": "h",
+    "text": "La Business Class"
+   },
+   {
+    "t": "p",
+    "html": "Espace et confort : une cabine où tout est mis en œuvre pour que votre voyage soit des plus agréables."
+   },
+   {
+    "t": "p",
+    "html": "Chaque siège mesure près de 60 cm de large et peut se transformer en un vrai hamac pour votre repos. Vous avez à votre disposition :<br>• une couverture en laine vierge,<br>• un oreiller,<br>• un service personnalisé,"
+   },
+   {
+    "t": "p",
+    "html": "Pour garantir le respect de votre intimité et votre bien-être, votre espace personnel est totalement préservé lorsque le passager devant vous incline son fauteuil."
+   },
+   {
+    "t": "p",
+    "html": "La vidéo et la musique personnelles ne sont pas encore disponibles sur nos appareils mais seront prévues sur nos prochains appareils moyen et long courrier. Cependant une variété de magazines et de journaux vous est proposée pour votre divertissement à bord."
+   },
+   {
+    "t": "p",
+    "html": "<strong>Restauration</strong><br>Une coupe de champagne ou de jus de fruit vous est servie en guise de bienvenue dès votre installation en cabine. Le repas en Business est cuisiné avec tout le soin de la haute gastronomie, servi dans une vaisselle élégante avec une attention constante de notre personnel de bord, toujours à l’écoute de vos moindres besoins."
+   },
+   {
+    "t": "h",
+    "text": "La classe ECO"
+   },
+   {
+    "t": "p",
+    "html": "Si vous êtes passagers en classes Eco sur nos vols, vous voyagez également dans le confort et êtes également l’objet d’une attention particulière de la part du personnel de bord."
+   },
+   {
+    "t": "p",
+    "html": "Nos sièges ergonomiques vous offrent le confort nécessaire pour un agréable voyage."
+   },
+   {
+    "t": "p",
+    "html": "En fonction de la durée de votre vol, ASKY vous propose une restauration et des boissons adaptées à chaque moment de la journée : petit déjeuner, déjeuner, collation ou dîner, boissons chaudes ou froides, alcoolisées ou non."
+   },
+   {
+    "t": "p",
+    "html": "<strong>Repas spéciaux</strong><br>Pour répondre aux besoins médicaux, diététiques, ou aux convenances religieuses, vous avez la possibilité de passer une commande de repas spéciaux pour des voyages à bord des avions de ASKY. Prière contacter votre agence de voyages ou un bureau ASKY au plus tard 48 heures avant le départ du vol."
+   },
+   {
+    "t": "p",
+    "html": "Vos enfants bénéficient aussi d’un menu adapté. Renseignez-vous au moment de la réservation."
+   },
+   {
+    "t": "p",
+    "html": "<strong>Ventes à bord</strong><br>Consultez dans notre magazine de bord la liste des articles vendus en hors-taxe (duty free) à bord de nos avions. Vous pouvez également en faire la demande directement auprès de notre personnel navigant commercial."
+   }
+  ]
+ },
+ "/tg/fr/plan/services/on-ground": {
+  "title": "On ground",
+  "crumbs": [
+   "Planifiez",
+   "Services"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/services"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "img",
+    "src": "/img/pages/en-services-au-sol.jpg",
+    "alt": "flyasky-asky-en-services-au-sol.jpg"
+   },
+   {
+    "t": "h",
+    "text": "Enregistrement à l’aéroport"
+   },
+   {
+    "t": "p",
+    "html": "Vous pouvez vous enregistrer et retirer votre carte d’embarquement à l’aéroport aux comptoirs ASKY. Il vous suffit de présenter votre billet électronique ou de communiquer votre numéro de réservation, de présenter votre passeport et éventuellement votre carte de fidélité ASKY Club, et nos agents d’enregistrement s’occuperont de vous. Une fiche de police vous est ensuite remise ; elle doit être remplie et remise au comptoir d’immigration avant d’accéder à la zone des boutiques hors-taxes et aux salles d’embarquement."
+   },
+   {
+    "t": "p",
+    "html": "Respectez l’heure limite d’enregistrement, c’est-à-dire l’heure au-delà de laquelle vous ne pouvez plus vous enregistrer. Les comptoirs d'enregistrement sont fermés 1 heure avant l’heure prévue du décollage.<br>Vous voyagez en Business Class? Des comptoirs vous sont exclusivement réservés et vous embarquez de manière prioritaire."
+   },
+   {
+    "t": "h",
+    "text": "Les salons"
+   },
+   {
+    "t": "p",
+    "html": "Si vous êtes passagers Business Class, ASKY vous offre la possibilité de vous relaxer, vous détendre, vous divertir ou travailler dans l’un des salons mis à sa disposition dans les aéroports des différentes villes que nous desservons."
+   },
+   {
+    "t": "p",
+    "html": "A l’écart de l’agitation de l’aéroport, vous y trouverez un espace confortable pour travailler au calme, vous ressourcer ou simplement vous reposer avant votre départ."
+   }
+  ]
+ },
+ "/tg/fr/plan/specials": {
+  "title": "Specials",
+  "crumbs": [
+   "Planifiez"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan"
+  ],
+  "children": [
+   [
+    "/tg/fr/plan/specials/unaccompanied-minors",
+    "Mineurs non accompagnés"
+   ],
+   [
+    "/tg/fr/plan/specials/pregnant-women",
+    "Femme enceinte"
+   ],
+   [
+    "/tg/fr/plan/specials/reduced-mobility",
+    "Passagers à mobilité réduite"
+   ]
+  ],
+  "form": false,
+  "blocks": []
+ },
+ "/tg/fr/plan/specials/pregnant-women": {
+  "title": "Pregnant women",
+  "crumbs": [
+   "Planifiez",
+   "Spéciales"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/specials"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "img",
+    "src": "/img/pages/en-femme-enceinte.jpg",
+    "alt": "flyasky-asky-en-femme-enceinte.jpg"
+   },
+   {
+    "t": "h",
+    "text": "Femme enceinte"
+   },
+   {
+    "t": "p",
+    "html": "Si vous attendez un enfant, pensez à nous le signaler au moment de la réservation, au plus tard 48 heures avant le départ de vol."
+   },
+   {
+    "t": "h",
+    "text": "Grossesse simple"
+   },
+   {
+    "t": "p",
+    "html": "Avant les 28 semaines de grossesse, la femme enceinte devrait se munir de son carnet de suivi qui lui sera demandé pendant l'enregisttrement."
+   },
+   {
+    "t": "p",
+    "html": "A partir de votre 28ème semaine de grossesse, votre obstétricien traitant doit vous délivrer un certificat médical d'aptitude à voyager, indiquant le nombre de semaines de grossesse et la date prévue de votre accouchement. Ce certificat doit vous être délivré au plus tard 7 jours avant votre départ."
+   },
+   {
+    "t": "p",
+    "html": "Au dela de 36 semaines, les femmes enceintes ne seront pas aceptées sur les vols ASKY."
+   },
+   {
+    "t": "p",
+    "html": "Seul les nouveaux nés de plus de 7 jours seront acceptés sur les vols ASKY"
+   }
+  ]
+ },
+ "/tg/fr/plan/specials/reduced-mobility": {
+  "title": "Reduced mobility",
+  "crumbs": [
+   "Planifiez",
+   "Spéciales"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/specials"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "img",
+    "src": "/img/pages/en-passager-mobilite-reduite.jpg",
+    "alt": "flyasky-asky-en-passager-mobilite-reduite.jpg"
+   },
+   {
+    "t": "h",
+    "text": "Passager à mobilité réduite"
+   },
+   {
+    "t": "p",
+    "html": "Les passagers à mobilité réduite ayant besoin d'une assistance particulière pour leur voyage, doivent prendre contact avec notre service réservation au plus tard 48h avant le départ du vol afin que toutes les dispositions soient mises en œuvre pour leur assurer un voyage dans les meilleures conditions de confort"
+   }
+  ]
+ },
+ "/tg/fr/plan/specials/unaccompanied-minors": {
+  "title": "Unaccompanied minors",
+  "crumbs": [
+   "Planifiez",
+   "Spéciales"
+  ],
+  "crumbLinks": [
+   "/tg/fr/plan",
+   "/tg/fr/plan/specials"
+  ],
+  "children": [],
+  "form": false,
+  "blocks": [
+   {
+    "t": "img",
+    "src": "/img/pages/enfant-non-accompagne-1-.jpg",
+    "alt": "flyasky-enfant-non-accompagne-1-.jpg"
+   },
+   {
+    "t": "h",
+    "text": "Enfant non accompagné"
+   },
+   {
+    "t": "p",
+    "html": "Jusqu'à 11 ans inclus, un enfant doit impérativement être accompagné d'un adulte.<br>Si votre enfant doit voyager seul, ASKY met à votre disposition un service d'escorte qui l'accompagnera du début à la fin de son voyage."
+   },
+   {
+    "t": "p",
+    "html": "Contactez votre agence de voyages ou nos services pour l'organisation de son déplacement.<br>Ce service est réservé aux enfants de 5 à 11 ans."
+   }
+  ]
+ }
+}

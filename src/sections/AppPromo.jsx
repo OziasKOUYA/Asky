@@ -20,10 +20,10 @@ export default function AppPromo() {
         gsap.fromTo(
           '.phone',
           { rotationY: -38, rotationX: 14, rotationZ: 6, y: 120 },
-          { rotationY: 14, rotationX: -4, rotationZ: -3, y: -40, ease: 'none', scrollTrigger: { trigger: root.current, start: 'top bottom', end: 'bottom top', scrub: 1 } }
+          { rotationY: 14, rotationX: -4, rotationZ: -3, y: -40, ease: 'none', scrollTrigger: { trigger: root.current, start: 'top bottom', end: 'bottom top', scrub: 0.6 } }
         );
         gsap.utils.toArray('.app__chip').forEach((c, i) => {
-          gsap.fromTo(c, { y: 80 + i * 30 }, { y: -60 - i * 25, ease: 'none', scrollTrigger: { trigger: root.current, start: 'top bottom', end: 'bottom top', scrub: 1 } });
+          gsap.fromTo(c, { y: 80 + i * 30 }, { y: -60 - i * 25, ease: 'none', scrollTrigger: { trigger: root.current, start: 'top bottom', end: 'bottom top', scrub: 0.6 } });
         });
         gsap.from('.app__copy > *', { y: 40, autoAlpha: 0, stagger: 0.1, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.app__copy', start: 'top 80%', once: true } });
       });

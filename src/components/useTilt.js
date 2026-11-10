@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { gsap, finePointer } from '../lib/gsap.js';
 
 // Carte qui s'incline en 3D sous le pointeur + halo lumineux (SpotlightCard de React Bits)
-export function useTilt(scopeRef, selector = '.tilt', max = 7) {
+export function useTilt(scopeRef, selector = '.tilt', max = 7, key = '') {
   useEffect(() => {
     if (!finePointer() || !scopeRef.current) return;
     const cards = [...scopeRef.current.querySelectorAll(selector)];
@@ -31,5 +31,5 @@ export function useTilt(scopeRef, selector = '.tilt', max = 7) {
       };
     });
     return () => offs.forEach((f) => f());
-  }, [scopeRef, selector, max]);
+  }, [scopeRef, selector, max, key]);
 }

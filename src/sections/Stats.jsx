@@ -24,9 +24,9 @@ export default function Stats() {
           ease: 'power3.out',
           scrollTrigger: { trigger: '.bento', start: 'top 82%', once: true },
         });
-        gsap.fromTo('.bento__plane', { xPercent: -30, autoAlpha: 0 }, { xPercent: 0, autoAlpha: 1, ease: 'none', scrollTrigger: { trigger: '.bento__fleet', start: 'top 95%', end: 'top 35%', scrub: 1 } });
+        gsap.fromTo('.bento__plane', { xPercent: -30, autoAlpha: 0 }, { xPercent: 0, autoAlpha: 1, ease: 'none', scrollTrigger: { trigger: '.bento__fleet', start: 'top 95%', end: 'top 35%', scrub: 0.6 } });
         // Mots qui s'allument au fil du scroll
-        gsap.fromTo('.about__lead .lw', { opacity: 0.16 }, { opacity: 1, stagger: 0.1, ease: 'none', scrollTrigger: { trigger: '.about__lead', start: 'top 80%', end: 'bottom 45%', scrub: 1 } });
+        gsap.fromTo('.about__lead .lw', { opacity: 0.16 }, { opacity: 1, stagger: 0.1, ease: 'none', scrollTrigger: { trigger: '.about__lead', start: 'top 80%', end: 'bottom 45%', scrub: 0.6 } });
       });
     },
     { scope: root }

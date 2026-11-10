@@ -737,25 +737,179 @@ ul {
 }
 .hero__copy .bw,
 .hero__copy .fade-in,
+.hero__stats-in,
 .hero__scroll > * {
   visibility: hidden;
 }
-.hero__scroll {
+
+/* Badge « The Pan African Airline » */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 18px 6px 6px;
+  margin-bottom: 22px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, rgba(54, 25, 13, 0.55), rgba(108, 50, 26, 0.35));
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px -14px rgba(54, 25, 13, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.hero__badge::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.22) 50%, transparent 70%);
+  transform: translateX(-120%);
+  animation: badgeShine 5s ease-in-out 2.5s infinite;
+}
+@keyframes badgeShine {
+  0%,
+  60% {
+    transform: translateX(-120%);
+  }
+  85%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+.hero__badge-logo {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--cafe);
+  box-shadow: 0 0 0 1px rgba(242, 164, 30, 0.6);
+}
+.hero__badge-logo img {
+  width: 24px;
+  height: auto;
+}
+.hero__badge-text {
+  background: linear-gradient(90deg, #fff, #ffe1a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero__badge-sep {
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.35);
+}
+.hero__badge-since {
+  color: var(--yellow);
+  letter-spacing: 0.12em;
+}
+.hero__lead-row {
+  display: flex;
+  gap: 18px;
+  margin-top: 22px;
+  max-width: 540px;
+}
+.hero__rule {
+  flex: none;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--yellow), rgba(242, 164, 30, 0));
+  transform-origin: top;
+}
+.hero__lead-row .hero__lead {
+  margin-top: 0;
+}
+
+/* Carte « ASKY en bref » à droite */
+.hero__stats {
   position: absolute;
   right: var(--gutter);
   bottom: clamp(36px, 7vh, 80px);
   z-index: 3;
+}
+.hero__stats-in {
+  padding: 16px 18px 18px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  box-shadow: 0 24px 50px -24px rgba(54, 25, 13, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  color: var(--white);
+}
+.hero__stats-head {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.85);
-  font-size: 13px;
-  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+}
+.hero__stats-head .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 0 4px rgba(242, 164, 30, 0.3);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+.hero__stats ul {
+  display: flex;
+  gap: 8px;
+}
+.hero__stats li {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: baseline;
+  column-gap: 6px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(54, 25, 13, 0.32);
+  min-width: 104px;
+}
+.hero__stats li .icon {
+  grid-column: 1 / -1;
+  color: var(--yellow);
+  margin-bottom: 8px;
+}
+.hero__stats strong {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.hero__stats li span {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.hero__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 11px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 .hero__scroll i {
-  width: 26px;
-  height: 42px;
+  width: 22px;
+  height: 36px;
   border: 1.5px solid rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   position: relative;
@@ -933,7 +1087,7 @@ ul {
 .booking {
   position: relative;
   z-index: 8;
-  margin-top: -42vh;
+  margin-top: -22vh;
   background: var(--cafe);
   color: var(--white);
   padding: 30px 0 clamp(80px, 9vw, 120px);
@@ -1734,21 +1888,19 @@ ul {
   opacity: 0.9;
   transition: stroke-width 0.3s, opacity 0.3s;
 }
-.route__comet {
-  fill: none;
-  stroke: #fff3d6;
-  stroke-width: 2.6;
-  stroke-linecap: round;
-  stroke-dasharray: 0.05 0.95;
-  stroke-dashoffset: 1;
+.fleet {
   opacity: 0;
   visibility: hidden;
-  animation: comet 3s linear infinite;
+  pointer-events: none;
 }
-@keyframes comet {
-  to {
-    stroke-dashoffset: 0;
-  }
+.fleet__plane path {
+  fill: #fff;
+  stroke: var(--cafe);
+  stroke-width: 0.8;
+}
+.fleet__halo {
+  fill: rgba(242, 164, 30, 0.35);
+  filter: blur(3px);
 }
 .has-hover .route__line {
   opacity: 0.25;
@@ -1805,12 +1957,6 @@ ul {
   font-size: 15px;
   font-weight: 500;
   fill: var(--yellow);
-}
-.map__plane {
-  fill: var(--white);
-  opacity: 0;
-  visibility: hidden;
-  filter: drop-shadow(0 0 6px rgba(242, 164, 30, 0.9));
 }
 .map__tip {
   position: absolute;
@@ -2555,6 +2701,11 @@ ul {
     max-width: 520px;
   }
 }
+@media (max-width: 1140px) {
+  .hero__stats {
+    display: none;
+  }
+}
 @media (max-width: 1020px) {
   .nav__links {
     display: none;
@@ -2801,10 +2952,142 @@ ul {
   }
   .hero__copy .bw,
   .hero__copy .fade-in,
+  .hero__stats-in,
   .hero__scroll > * {
     visibility: visible;
   }
-  .route__comet {
+  .fleet {
+    display: none;
+  }
+}
+
+/* =========================================================
+   MOBILE — ajustements fins
+   ========================================================= */
+@media (max-width: 700px) {
+  .hero__plane {
+    width: 112vw;
+    left: 52%;
+    top: 33%;
+  }
+  .hero__word {
+    top: 33%;
+    font-size: 27vw;
+  }
+  .hero__copy {
+    bottom: 26px;
+  }
+  .hero__title {
+    font-size: clamp(38px, 11vw, 48px);
+  }
+  .hero__badge {
+    font-size: 10.5px;
+    gap: 9px;
+    padding: 5px 14px 5px 5px;
+    margin-bottom: 16px;
+  }
+  .hero__badge-logo {
+    width: 28px;
+    height: 28px;
+  }
+  .hero__badge-logo img {
+    width: 20px;
+  }
+  .hero__lead-row {
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .hero__lead {
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+  .hero__ctas {
+    margin-top: 20px;
+    gap: 10px;
+  }
+  .hero__ctas .btn {
+    flex: 1;
+    padding: 0 14px;
+  }
+  .hero__scrim {
+    height: 70%;
+    background: linear-gradient(0deg, rgba(54, 25, 13, 0.75), rgba(54, 25, 13, 0.3) 60%, transparent);
+  }
+  .dest__label {
+    font-size: 11px;
+  }
+  .dest__meta .chip {
+    height: 36px;
+    font-size: 13px;
+  }
+  .dest__progress {
+    bottom: 24px;
+  }
+
+  .booking__head {
+    margin-bottom: 28px;
+  }
+  .booking__card {
+    border-radius: 24px;
+    padding: 10px 10px 20px;
+  }
+  .booking__pane {
+    padding: 18px 6px 0;
+  }
+
+  .network__in {
+    padding-top: 84px;
+    gap: 0;
+    align-content: center;
+  }
+  .network__lead {
+    margin-top: 12px;
+    font-size: 14.5px;
+  }
+  .network__counter {
+    margin: 14px 0 6px;
+  }
+  .legend {
+    display: none;
+  }
+  .map__svg {
+    height: min(52svh, 480px);
+    width: 100%;
+  }
+  .city__label:not(.city__label--hub) {
+    display: none;
+  }
+  .city__label--hub {
+    font-size: 22px;
+  }
+  .city__dot {
+    stroke-width: 2;
+  }
+  .map__tip {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .about__lead {
+    font-size: 21px;
+  }
+  .offers__head {
+    margin-bottom: 26px;
+  }
+  .svc-follow {
+    display: none;
+  }
+  .cta__copy .h2 {
+    font-size: 34px;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 380px) {
+  .hero__badge-sep,
+  .hero__badge-since {
     display: none;
   }
 }

@@ -56,7 +56,7 @@ export function SplitText({ as: Tag = 'h2', text, className = '', start = 'top 8
           duration: 0.9,
           ease: 'power4.out',
           scrollTrigger: scrub
-            ? { trigger: ref.current, start, end: 'top 40%', scrub: 1 }
+            ? { trigger: ref.current, start, end: 'top 40%', scrub: 0.6 }
             : { trigger: ref.current, start, once: true },
         });
       });

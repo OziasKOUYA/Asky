@@ -4,7 +4,7 @@ import Icon from '../components/Icon.jsx';
 import { SplitText } from '../components/TextFx.jsx';
 import africa from '../data/africa.json';
 import { CITIES, ROUTES, distanceKm } from '../data/site.js';
-import { gsap, useGSAP, MOTION_OK, finePointer } from '../lib/gsap.js';
+import { gsap, ScrollTrigger, useGSAP, MOTION_OK, finePointer } from '../lib/gsap.js';
 
 const W = 800;
 const H = 860;
@@ -78,15 +78,16 @@ export default function Network() {
         gsap.set(q('.city'), { scale: 0, transformOrigin: 'center', transformBox: 'fill-box' });
         gsap.set(q('.city--hub'), { scale: 1 });
         gsap.set(q('.city__label'), { autoAlpha: 0 });
+        gsap.set(q('.fleet__plane'), { autoAlpha: 0 });
 
         const tl = gsap.timeline({
           defaults: { ease: 'none' },
           scrollTrigger: {
             trigger: root.current,
             start: 'top top',
-            end: () => `+=${window.innerHeight * 2.4}`,
+            end: () => `+=${window.innerHeight * 1.8}`,
             pin: true,
-            scrub: 1,
+            scrub: 0.6,
             invalidateOnRefresh: true,
             onUpdate: (s) => {
               const done = Math.round(gsap.utils.clamp(0, 1, (s.progress - 0.12) / 0.78) * 30);
@@ -110,16 +111,26 @@ export default function Network() {
             .to(q(`.city__label[data-c="${r.b}"]`), { autoAlpha: 1, duration: 0.3 }, at + 0.7)
             .to(q(`.map__country[data-n="${COUNTRY_OF[r.b]}"]`), { fill: '#8A4526', duration: 0.4 }, at + 0.7);
         });
-        tl.to(q('.route__comet'), { autoAlpha: 1, duration: 0.6 }, t0 + routes.length * each + 0.6).to(q('.map__plane'), { autoAlpha: 1, duration: 0.4 }, t0 + routes.length * each + 0.6);
+        // Une fois toutes les lignes tracées : un petit avion par liaison au départ de Lomé
+        tl.to(q('.fleet'), { autoAlpha: 1, duration: 0.6 }, t0 + routes.length * each + 0.5);
 
-        // Avion en boucle sur la ligne Lomé → Johannesburg
-        const jnb = q('.route[data-b="JNB"] .route__line')[0];
-        const loop = gsap.to(q('.map__plane'), {
-          motionPath: { path: jnb, autoRotate: 90 },
-          duration: 7,
-          ease: 'power1.inOut',
-          repeat: -1,
-          repeatDelay: 0.6,
+        const fleet = gsap.timeline({ paused: true });
+        q('.fleet__plane').forEach((plane, k) => {
+          const line = q(`.route[data-r="${plane.dataset.r}"] .route__line`)[0];
+          const len = Number(plane.dataset.len);
+          const dur = 3.2 + len / 95; // vol plus long pour les destinations lointaines
+          const one = gsap.timeline({ repeat: -1, repeatDelay: 0.8 + ((k * 0.53) % 1.6) });
+          one
+            .fromTo(plane, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: 'power1.out' }, 0)
+            .to(plane, { motionPath: { path: line, autoRotate: 90, start: 0, end: 1 }, duration: dur, ease: 'sine.inOut' }, 0)
+            .to(plane, { autoAlpha: 0, duration: 0.5, ease: 'power1.in' }, dur - 0.5);
+          fleet.add(one, (k * 0.61) % 5.5);
+        });
+        const fleetST = ScrollTrigger.create({
+          trigger: root.current,
+          start: 'top bottom',
+          end: () => `+=${window.innerHeight * 4.6}`,
+          onToggle: (s) => (s.isActive ? fleet.play() : fleet.pause()),
         });
 
         // Inclinaison de la carte à la souris
@@ -138,7 +149,8 @@ export default function Network() {
           offMove = () => window.removeEventListener('pointermove', move);
         }
         return () => {
-          loop.kill();
+          fleet.kill();
+          fleetST.kill();
           offMove?.();
         };
       });
@@ -234,13 +246,21 @@ export default function Network() {
                   {routes.map((r, i) => (
                     <g key={i} className={`route ${hover && (r.b === hover || r.a === hover) ? 'is-on' : ''}`} data-r={i} data-b={r.b}>
                       <path className="route__line" d={r.d} pathLength="1" />
-                      <path className="route__comet" d={r.d} pathLength="1" style={{ animationDelay: `${(i * 0.37) % 3}s`, animationDuration: `${2.4 + (r.len / 400) * 2}s` }} />
                     </g>
                   ))}
                 </g>
 
-                <g className="map__plane" aria-hidden="true">
-                  <path d="M0 -11 L3 -3 L11 2 L11 4 L3 2 L2 8 L5 10 L5 11 L0 10 L-5 11 L-5 10 L-2 8 L-3 2 L-11 4 L-11 2 L-3 -3 Z" />
+                <g className="fleet" aria-hidden="true">
+                  {routes.map((r, i) =>
+                    r.a === 'LFW' ? (
+                      <g key={i} className="fleet__plane" data-r={i} data-len={Math.round(r.len)}>
+                        <g transform="scale(0.62)">
+                          <circle r="9" className="fleet__halo" />
+                          <path d="M0 -11 L3 -3 L11 2 L11 4 L3 2 L2 8 L5 10 L5 11 L0 10 L-5 11 L-5 10 L-2 8 L-3 2 L-11 4 L-11 2 L-3 -3 Z" />
+                        </g>
+                      </g>
+                    ) : null
+                  )}
                 </g>
 
                 {cities.map((c) => {
@@ -251,7 +271,7 @@ export default function Network() {
                   const ly = side.includes('t') ? (horiz ? -5 : c.hub ? -14 : -11) : side.includes('b') ? (horiz ? 13 : 18) : 4;
                   const anchor = side.includes('l') ? 'end' : side.includes('r') ? 'start' : 'middle';
                   return (
-                    <g key={c.code} onMouseEnter={() => setHover(c.code)} onMouseLeave={() => setHover(null)} className="city__hit">
+                    <g key={c.code} onMouseEnter={() => setHover(c.code)} onMouseLeave={() => setHover(null)} onClick={() => setHover((h) => (h === c.code ? null : c.code))} className="city__hit">
                       <g className={`city ${c.hub ? 'city--hub' : ''} ${hover === c.code ? 'is-on' : ''}`} data-c={c.code}>
                         <circle cx={x} cy={y} r={c.hub ? 18 : 11} fill="url(#cityGlow)" />
                         {c.hub && <circle className="city__pulse" cx={x} cy={y} r="7" />}

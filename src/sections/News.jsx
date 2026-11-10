@@ -1,8 +1,7 @@
 import { useRef } from 'react';
 import Icon from '../components/Icon.jsx';
 import { SplitText } from '../components/TextFx.jsx';
-import { gsap, useGSAP, MOTION_OK } from '../lib/gsap.js';
-import { LINK } from '../data/site.js';
+import { gsap, useGSAP, MOTION_OK, NEWS_URL } from '../lib/gsap.js';
 
 export default function News() {
   const root = useRef(null);
@@ -14,7 +13,7 @@ export default function News() {
         gsap.fromTo(
           '.news__media',
           { clipPath: 'inset(16% 20% 16% 20% round 28px)' },
-          { clipPath: 'inset(0% 0% 0% 0% round 28px)', ease: 'none', scrollTrigger: { trigger: '.news__media', start: 'top 90%', end: 'top 30%', scrub: 1 } }
+          { clipPath: 'inset(0% 0% 0% 0% round 28px)', ease: 'none', scrollTrigger: { trigger: '.news__media', start: 'top 90%', end: 'top 30%', scrub: 0.6 } }
         );
         gsap.fromTo('.news__media img', { scale: 1.25, yPercent: -6 }, { scale: 1.05, yPercent: 4, ease: 'none', scrollTrigger: { trigger: '.news__media', start: 'top bottom', end: 'bottom top', scrub: true } });
         gsap.from('.news__body > *', { y: 40, autoAlpha: 0, stagger: 0.1, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.news__body', start: 'top 80%', once: true } });
@@ -33,7 +32,7 @@ export default function News() {
             </p>
             <SplitText as="h2" className="h2" text="À la une" />
           </div>
-          <a className="btn btn--ghost" href={LINK('/corporate/media/news')} target="_blank" rel="noreferrer">
+          <a className="btn btn--ghost" href={NEWS_URL}>
             Toutes les actualités <Icon name="arrowUpRight" size={18} />
           </a>
         </div>
@@ -68,7 +67,7 @@ export default function News() {
                 <span>accord de ce type en Afrique subsaharienne</span>
               </li>
             </ul>
-            <a className="btn btn--dark" href={LINK('/corporate/media/news')} target="_blank" rel="noreferrer">
+            <a className="btn btn--dark" href={`${NEWS_URL}?article=0`}>
               Lire la suite <Icon name="arrow" size={18} />
             </a>
           </div>

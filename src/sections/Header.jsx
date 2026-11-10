@@ -1,7 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
 import Icon from '../components/Icon.jsx';
-import { MENU, CONTACT } from '../data/site.js';
-import { gsap, scrollToTarget, getLenis } from '../lib/gsap.js';
+import { CONTACT } from '../data/site.js';
+import { SECTIONS, HOME, NEWS_PATH, isExternal } from '../data/sitemap.js';
+import { gsap, getLenis } from '../lib/gsap.js';
+
+const here = () => window.location.pathname.replace(/\/+$/, '') || '/';
+const isHome = () => ['/', '/tg/fr', '/index.html'].includes(here());
+const extProps = (href) => (isExternal(href) ? { target: '_blank', rel: 'noreferrer' } : {});
+
+// Ancre de l'accueil si on y est, sinon page équivalente
+function goTo(anchor, fallback) {
+  const el = document.querySelector(anchor);
+  if (el) {
+    const l = getLenis();
+    if (l) l.scrollTo(anchor, { offset: -90, duration: 1.2 });
+    else el.scrollIntoView({ behavior: 'smooth' });
+  } else window.location.href = fallback;
+}
 
 export default function Header() {
   const [open, setOpen] = useState(null); // index du méga-menu ouvert
@@ -48,11 +63,12 @@ export default function Header() {
     closeTimer.current = setTimeout(() => setOpen(null), 160);
   };
 
-  const go = (target) => {
+  const go = (anchor, fallback) => {
     setMobile(false);
     setOpen(null);
-    scrollToTarget(target);
+    goTo(anchor, fallback);
   };
+  const BOOK = '/tg/fr/fly/booking';
 
   return (
     <header className={`header ${scrolled ? 'is-scrolled' : ''} ${hidden && open === null ? 'is-hidden' : ''}`}>
@@ -66,8 +82,12 @@ export default function Header() {
             ))}
           </div>
           <div className="topbar__right">
-            <a href="#contact">Contact</a>
-            <a href="#">Plan du site</a>
+            <a href="#contact" onClick={(e) => (e.preventDefault(), go('#contact', '#contact'))}>
+              Contact
+            </a>
+            <a href="https://www.flyasky.com/tg/fr/sitemap" target="_blank" rel="noreferrer">
+              Plan du site
+            </a>
             <button className="topbar__lang" type="button">
               <span className="flag-tg" aria-hidden="true" /> Togo · FR <Icon name="chevron" size={13} />
             </button>
@@ -77,16 +97,16 @@ export default function Header() {
 
       <nav className="nav" onMouseLeave={leave} aria-label="Menu principal">
         <div className="container nav__in">
-          <a href="#top" className="nav__logo" onClick={(e) => (e.preventDefault(), go('#top'))} aria-label="ASKY, accueil">
+          <a href={HOME} className="nav__logo" onClick={(e) => isHome() && (e.preventDefault(), go('#top', HOME))} aria-label="ASKY, accueil">
             <img src="/img/logo.png" alt="ASKY — The Pan African Airline" />
           </a>
 
           <ul className="nav__links">
-            {MENU.map((m, i) => (
-              <li key={m.label} onMouseEnter={() => enter(i)}>
+            {SECTIONS.map((m, i) => (
+              <li key={m.key} onMouseEnter={() => enter(i)}>
                 <button
                   type="button"
-                  className={`nav__link ${open === i ? 'is-active' : ''}`}
+                  className={`nav__link ${open === i || here().startsWith(m.path) ? 'is-active' : ''}`}
                   aria-expanded={open === i}
                   onClick={() => setOpen(open === i ? null : i)}
                 >
@@ -96,17 +116,17 @@ export default function Header() {
               </li>
             ))}
             <li>
-              <a className="nav__link" href="#reseau" onClick={(e) => (e.preventDefault(), go('#reseau'))}>
-                Réseau
+              <a className={`nav__link ${here() === NEWS_PATH ? 'is-active' : ''}`} href={NEWS_PATH}>
+                Actualités
               </a>
             </li>
           </ul>
 
           <div className="nav__actions">
-            <a href="#reserver" className="btn btn--ghost nav__manage" onClick={(e) => (e.preventDefault(), go('#reserver'))}>
+            <a href="/tg/fr/fly/booking/manage" className="btn btn--ghost nav__manage">
               <Icon name="ticket" size={18} /> Mes voyages
             </a>
-            <a href="#reserver" className="btn btn--primary" onClick={(e) => (e.preventDefault(), go('#reserver'))}>
+            <a href={BOOK} className="btn btn--primary" onClick={(e) => (e.preventDefault(), go('#reserver', BOOK))}>
               Réserver <Icon name="arrow" size={18} />
             </a>
             <button className="nav__burger" type="button" aria-label="Ouvrir le menu" onClick={() => setMobile(true)}>
@@ -119,25 +139,24 @@ export default function Header() {
           <div className="mega" ref={panelRef} onMouseEnter={() => enter(open)}>
             <div className="container mega__in">
               <div className="mega__intro">
-                <span className="eyebrow">{MENU[open].label}</span>
-                <p>
-                  {
-                    [
-                      'Tout ce qu’il faut savoir avant le départ : documents, bagages et services.',
-                      'Réservez, gérez votre vol, enregistrez-vous et suivez votre avion en temps réel.',
-                      'ASKY Club, vacances en Afrique et expérience à bord.',
-                      'La compagnie panafricaine basée à Lomé : notre histoire, nos équipes, nos actualités.',
-                    ][open]
-                  }
-                </p>
+                <span className="eyebrow">{SECTIONS[open].label}</span>
+                <p>{SECTIONS[open].tagline}</p>
+                <a className="mega__all" href={SECTIONS[open].path}>
+                  Toute la rubrique <Icon name="arrow" size={16} />
+                </a>
               </div>
-              {MENU[open].columns.map((c) => (
+              {SECTIONS[open].groups.map((c) => (
                 <div className="mega__col" key={c.title}>
-                  <h4>{c.title}</h4>
+                  <h4>
+                    <a href={c.path}>{c.title}</a>
+                  </h4>
                   <ul>
-                    {c.links.map((l) => (
-                      <li key={l}>
-                        <a href="#">{l}</a>
+                    {c.pages.map((l) => (
+                      <li key={l.path}>
+                        <a href={l.path} {...extProps(l.path)} className={here() === l.path ? 'is-current' : ''}>
+                          {l.title}
+                          {l.ext && <Icon name="arrowUpRight" size={13} />}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -156,26 +175,33 @@ export default function Header() {
           </button>
         </div>
         <div className="mnav__body">
-          {MENU.map((m) => (
-            <details key={m.label}>
+          {SECTIONS.map((m) => (
+            <details key={m.key}>
               <summary>
                 {m.label} <Icon name="chevron" size={18} />
               </summary>
-              <div className="mnav__links">
-                {m.columns.flatMap((c) => c.links.slice(0, 3)).map((l) => (
-                  <a key={l} href="#">
-                    {l}
-                  </a>
+              <div className="mnav__groups">
+                {m.groups.map((c) => (
+                  <div key={c.title} className="mnav__group">
+                    <a className="mnav__gtitle" href={c.path}>
+                      {c.title}
+                    </a>
+                    {c.pages.map((l) => (
+                      <a key={l.path} href={l.path} {...extProps(l.path)}>
+                        {l.title}
+                      </a>
+                    ))}
+                  </div>
                 ))}
               </div>
             </details>
           ))}
-          <a className="mnav__plain" href="#reseau" onClick={(e) => (e.preventDefault(), go('#reseau'))}>
-            Notre réseau
+          <a className="mnav__plain" href={NEWS_PATH}>
+            Actualités
           </a>
         </div>
         <div className="mnav__foot">
-          <a href="#reserver" className="btn btn--primary btn--block" onClick={(e) => (e.preventDefault(), go('#reserver'))}>
+          <a href={BOOK} className="btn btn--primary btn--block" onClick={(e) => (e.preventDefault(), go('#reserver', BOOK))}>
             Réserver un vol <Icon name="arrow" size={18} />
           </a>
           <a href={`tel:${CONTACT.phones[0].replace(/\s/g, '')}`} className="mnav__phone">

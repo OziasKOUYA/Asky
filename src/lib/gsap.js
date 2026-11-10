@@ -15,7 +15,7 @@ export const finePointer = () => window.matchMedia('(hover: hover) and (pointer:
 let lenis = null;
 export function startSmoothScroll() {
   if (lenis || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return lenis;
-  lenis = new Lenis({ lerp: 0.09, wheelMultiplier: 1 });
+  lenis = new Lenis({ lerp: 0.11, wheelMultiplier: 1, touchMultiplier: 1.4 });
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add((t) => lenis.raf(t * 1000));
   gsap.ticker.lagSmoothing(0);
@@ -23,7 +23,14 @@ export function startSmoothScroll() {
 }
 export const getLenis = () => lenis;
 
+// Défile vers une ancre de la page ; si elle n'existe pas ici (page Nouvelles), on rejoint l'accueil
 export function scrollToTarget(target, offset = -90) {
-  if (lenis) lenis.scrollTo(target, { offset, duration: 1.6 });
+  if (!document.querySelector(target)) {
+    window.location.href = `/tg/fr/${target}`;
+    return;
+  }
+  if (lenis) lenis.scrollTo(target, { offset, duration: 1.2 });
   else document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
 }
+
+export const NEWS_URL = '/tg/fr/corporate/media/news';

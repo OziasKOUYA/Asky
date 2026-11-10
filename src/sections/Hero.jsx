@@ -48,8 +48,8 @@ export default function Hero({ ready }) {
           scrollTrigger: {
             trigger: root.current,
             start: 'top top',
-            end: () => `+=${window.innerHeight * 4.2}`,
-            scrub: 1,
+            end: () => `+=${window.innerHeight * 3.3}`,
+            scrub: 0.9,
             pin: true,
             invalidateOnRefresh: true,
             onUpdate: (s) => clouds.current?.setProgress(Math.min(1, s.progress * 1.05)),
@@ -58,12 +58,12 @@ export default function Hero({ ready }) {
         });
 
         // 1. Le texte d'accueil s'efface, les lettres du mot géant s'écartent
-        tl.to(q('.hero__copy'), { y: -80, autoAlpha: 0, duration: 1.6 }, 0)
-          .to(q('.hero__scroll'), { autoAlpha: 0, duration: 0.6 }, 0)
-          .to(q('.hero__word span'), { x: (i) => (i - 3) * window.innerWidth * 0.08, autoAlpha: 0, duration: 3.6 }, 0.4)
+        tl.to(q('.hero__copy'), { y: -70, autoAlpha: 0, duration: 0.8 }, 0)
+          .to(q('.hero__scroll, .hero__stats'), { autoAlpha: 0, y: 30, duration: 0.5 }, 0)
+          .to(q('.hero__word span'), { x: (i) => (i - 3) * window.innerWidth * 0.08, autoAlpha: 0, duration: 1.5 }, 0.1)
           // 2. L'avion prend de l'altitude puis file vers le haut à droite et dépasse la caméra
-          .to(q('.hero__plane'), { scale: 1.18, y: () => -window.innerHeight * 0.04, rotation: -3, duration: 3 }, 0)
-          .to(q('.hero__streaks'), { autoAlpha: 1, duration: 1.4 }, 2.4)
+          .to(q('.hero__plane'), { scale: 1.14, y: () => -window.innerHeight * 0.05, rotation: -3, duration: 1.1, ease: 'power1.out' }, 0)
+          .to(q('.hero__streaks'), { autoAlpha: 1, duration: 0.5 }, 0.6)
           .to(
             q('.hero__plane'),
             {
@@ -71,42 +71,38 @@ export default function Hero({ ready }) {
               y: () => -window.innerHeight * 1.05,
               scale: 3.6,
               rotation: -12,
-              duration: 3.2,
+              duration: 2.3,
               ease: 'power2.in',
             },
-            3
+            0.9
           )
-          .to(q('.hero__plane-shadow'), { autoAlpha: 0, duration: 1 }, 3)
-          .to(q('.hero__dim'), { autoAlpha: 1, duration: 1.6 }, 5)
-          .to(q('.hero__streaks'), { autoAlpha: 0, duration: 1.2 }, 5.8);
+          .to(q('.hero__plane-shadow'), { autoAlpha: 0, duration: 0.5 }, 0.8)
+          .to(q('.hero__dim'), { autoAlpha: 1, duration: 0.8 }, 2.4)
+          .to(q('.hero__streaks'), { autoAlpha: 0, duration: 0.6 }, 2.9);
 
         // 3. Après le départ : les destinations s'affichent l'une après l'autre
-        const showAt = [6.2, 9, 11.8];
+        const showAt = [3.3, 5.4, 7.5];
         DESTS.forEach((_, i) => {
           const d = q('.dest')[i];
           const dq = gsap.utils.selector(d);
           const t = showAt[i];
           tl.to(d, { autoAlpha: 1, duration: 0.01 }, t)
-            .fromTo(dq('.dest__label'), { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.6 }, t)
-            .fromTo(dq('.dest__city .ch'), { yPercent: 115 }, { yPercent: 0, stagger: 0.03, duration: 0.9, ease: 'power3.out' }, t + 0.1)
-            .fromTo(dq('.dest__code'), { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.6 }, t + 0.5)
-            .fromTo(dq('.dest__arc-line'), { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.3, ease: 'power1.inOut' }, t + 0.4)
-            .to(
-              dq('.dest__mini'),
-              { motionPath: { path: dq('.dest__arc-path')[0], autoRotate: true }, duration: 1.3, ease: 'power1.inOut' },
-              t + 0.4
-            )
-            .fromTo(dq('.dest__meta > *'), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, stagger: 0.08, duration: 0.6 }, t + 0.9);
+            .fromTo(dq('.dest__label'), { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.5 }, t)
+            .fromTo(dq('.dest__city .ch'), { yPercent: 115 }, { yPercent: 0, stagger: 0.025, duration: 0.7, ease: 'power3.out' }, t + 0.1)
+            .fromTo(dq('.dest__code'), { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.5 }, t + 0.35)
+            .fromTo(dq('.dest__arc-line'), { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1, ease: 'power1.inOut' }, t + 0.3)
+            .to(dq('.dest__mini'), { motionPath: { path: dq('.dest__arc-path')[0], autoRotate: true }, duration: 1, ease: 'power1.inOut' }, t + 0.3)
+            .fromTo(dq('.dest__meta > *'), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, stagger: 0.06, duration: 0.5 }, t + 0.7);
           if (i < DESTS.length - 1) {
-            tl.to(dq('.dest__city .ch'), { yPercent: -115, stagger: 0.02, duration: 0.7, ease: 'power3.in' }, t + 2.1)
-              .to(dq('.dest__label, .dest__code, .dest__arc, .dest__meta'), { autoAlpha: 0, duration: 0.6 }, t + 2.2)
-              .to(d, { autoAlpha: 0, duration: 0.01 }, t + 2.8);
+            tl.to(dq('.dest__city .ch'), { yPercent: -115, stagger: 0.015, duration: 0.5, ease: 'power3.in' }, t + 1.6)
+              .to(dq('.dest__label, .dest__code, .dest__arc, .dest__meta'), { autoAlpha: 0, duration: 0.45 }, t + 1.65)
+              .to(d, { autoAlpha: 0, duration: 0.01 }, t + 2.1);
           }
         });
-        tl.to(q('.dest__progress i'), { scaleX: 1, duration: 8.2 }, 6.2);
+        tl.to(q('.dest__progress i'), { scaleX: 1, duration: 6 }, 3.3);
 
         // 4. Fondu café vers la section suivante
-        tl.to(q('.dest')[2], { autoAlpha: 0, y: -40, duration: 1.2 }, 14.6).to(q('.hero__fade'), { autoAlpha: 1, duration: 1.4 }, 14.4);
+        tl.to(q('.dest')[2], { autoAlpha: 0, y: -40, duration: 0.7 }, 9.4).to(q('.hero__fade'), { autoAlpha: 1, duration: 1 }, 9.3);
       });
 
       // Version sans animation : l'avion reste en place, la première destination est visible
@@ -124,10 +120,12 @@ export default function Hero({ ready }) {
       const q = gsap.utils.selector(root);
       const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
       intro
-        .fromTo(q('.hero__plane-intro'), { x: () => -window.innerWidth * 0.7, y: 120, scale: 0.55, rotation: 6 }, { x: 0, y: 0, scale: 1, rotation: 0, duration: 2.2, ease: 'power3.out' }, 0)
+        .fromTo(q('.hero__plane-intro'), { x: () => -window.innerWidth * 0.7, y: 120, scale: 0.55, rotation: 6 }, { x: 0, y: 0, scale: 1, rotation: 0, duration: 1.7, ease: 'power3.out' }, 0)
         .fromTo(q('.hero__word span'), { yPercent: 60, autoAlpha: 0 }, { yPercent: 0, autoAlpha: 1, stagger: 0.06, duration: 1.4 }, 0.2)
         .fromTo(q('.hero__copy .bw'), { y: 28, autoAlpha: 0, filter: 'blur(10px)' }, { y: 0, autoAlpha: 1, filter: 'blur(0px)', stagger: 0.06, duration: 1 }, 0.8)
         .fromTo(q('.hero__copy .fade-in'), { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.1, duration: 0.9 }, 1.2)
+        .fromTo(q('.hero__stats-in'), { y: 40, autoAlpha: 0, rotationX: -25 }, { y: 0, autoAlpha: 1, rotationX: 0, duration: 1.1, transformPerspective: 900 }, 1.3)
+        .fromTo(q('.hero__rule'), { scaleY: 0 }, { scaleY: 1, duration: 0.9 }, 1.3)
         .fromTo(q('.hero__scroll > *'), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.8 }, 1.8);
 
       gsap.to(q('.hero__plane-float'), { y: -14, rotation: -1.2, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
@@ -185,8 +183,13 @@ export default function Hero({ ready }) {
       <div className="hero__dim" />
 
       <div className="container hero__copy">
-        <p className="eyebrow eyebrow--light fade-in">
-          <Icon name="sparkle" size={14} /> The Pan African Airline
+        <p className="hero__badge fade-in">
+          <span className="hero__badge-logo" aria-hidden="true">
+            <img src="/img/logo-light.png" alt="" />
+          </span>
+          <span className="hero__badge-text">The Pan African Airline</span>
+          <span className="hero__badge-sep" aria-hidden="true" />
+          <span className="hero__badge-since">Depuis 2010</span>
         </p>
         <h1 className="hero__title" aria-label="Volez au cœur de l'Afrique">
           {['Volez', 'au', 'cœur', 'de'].map((w) => (
@@ -196,9 +199,12 @@ export default function Hero({ ready }) {
           ))}
           <span className="bw accent">l’Afrique</span>
         </h1>
-        <p className="hero__lead fade-in">
-          30 villes, 28 pays, une seule compagnie panafricaine. Au départ de Lomé, ASKY relie l’Afrique de l’Ouest, du Centre, de l’Est et du Sud.
-        </p>
+        <div className="hero__lead-row fade-in">
+          <span className="hero__rule" aria-hidden="true" />
+          <p className="hero__lead">
+            Une seule compagnie pour relier l’Afrique de l’Ouest, du Centre, de l’Est et du Sud. Décollez de Lomé vers 30 destinations, à bord de Boeing 737 modernes.
+          </p>
+        </div>
         <div className="hero__ctas fade-in">
           <a href="#reserver" className="btn btn--primary btn--lg" onClick={(e) => (e.preventDefault(), scrollToTarget('#reserver'))}>
             Réserver un vol <Icon name="arrow" size={18} />
@@ -209,9 +215,34 @@ export default function Hero({ ready }) {
         </div>
       </div>
 
+      <aside className="hero__stats" aria-label="ASKY en bref">
+        <div className="hero__stats-in">
+        <p className="hero__stats-head">
+          <span className="dot" /> Hub de Lomé · LFW
+        </p>
+        <ul>
+          <li>
+            <Icon name="pin" size={18} />
+            <strong>30</strong>
+            <span>destinations</span>
+          </li>
+          <li>
+            <Icon name="globe" size={18} />
+            <strong>28</strong>
+            <span>pays</span>
+          </li>
+          <li>
+            <Icon name="fleet" size={18} />
+            <strong>737</strong>
+            <span>MAX &amp; NG</span>
+          </li>
+        </ul>
+        </div>
+      </aside>
+
       <div className="hero__scroll" aria-hidden="true">
-        <span>Faites défiler pour décoller</span>
         <i />
+        <span>Défilez pour décoller</span>
       </div>
 
       {/* Destinations affichées après le départ de l'avion */}

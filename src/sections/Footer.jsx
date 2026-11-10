@@ -3,11 +3,12 @@ import Icon from '../components/Icon.jsx';
 import { CONTACT, LINK } from '../data/site.js';
 import { gsap, useGSAP, MOTION_OK, scrollToTarget } from '../lib/gsap.js';
 
+const R = '/tg/fr';
 const COLS = [
-  { title: 'Découvrez', links: ['ASKY Club', 'Vacances ASKY', 'Expérience ASKY', 'Magazine Calebasse'] },
-  { title: 'Informations', links: ['Bagages', 'Formalités', 'Statut du vol', 'Calendrier des vols'] },
-  { title: 'Assistance', links: ['Contacts', 'FAQs', 'Politique de confidentialité', 'Commentaires'] },
-  { title: "À propos d'ASKY", links: ['Société', 'Carrières', 'Nouvelles', 'Conditions générales de transport'] },
+  { title: 'Découvrez', links: [['ASKY Club', `${R}/explore/asky-club/overview`], ['Expérience ASKY', `${R}/explore/services/asky-experience`], ['Newsletter', `${R}/explore/support/subscription`], ['Commentaires', `${R}/explore/support/feedback`]] },
+  { title: 'Informations', links: [['Bagages', `${R}/plan/essentials/luggage`], ['Formalités', `${R}/plan/requirements/formalities`], ['Statut du vol', `${R}/fly/booking/status`], ['Horaires des vols', `${R}/fly/booking/schedule`]] },
+  { title: 'Voyagez', links: [['Gérer ma réservation', `${R}/fly/booking/manage`], ['Enregistrement', `${R}/fly/booking/check-in`], ['Notre réseau', `${R}/fly/network/international`], ['Notre flotte', `${R}/fly/fleet`]] },
+  { title: "À propos d'ASKY", links: [['La compagnie', `${R}/corporate/about/asky`], ['Chiffres clés', `${R}/corporate/about/figures`], ['Carrière', `${R}/corporate/career`], ['Nouvelles', `${R}/corporate/media/news`]] },
 ];
 
 export default function Footer() {
@@ -18,7 +19,7 @@ export default function Footer() {
     () => {
       const mm = gsap.matchMedia();
       mm.add(MOTION_OK, () => {
-        gsap.fromTo('.cta__plane', { x: '-30vw', y: 60, rotation: 4 }, { x: '18vw', y: -40, rotation: -4, ease: 'none', scrollTrigger: { trigger: '.cta', start: 'top bottom', end: 'bottom top', scrub: 1 } });
+        gsap.fromTo('.cta__plane', { x: '-30vw', y: 60, rotation: 4 }, { x: '18vw', y: -40, rotation: -4, ease: 'none', scrollTrigger: { trigger: '.cta', start: 'top bottom', end: 'bottom top', scrub: 0.6 } });
         gsap.from('.footer__col, .footer__brand > *', { y: 30, autoAlpha: 0, stagger: 0.06, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: '.footer__grid', start: 'top 90%', once: true } });
       });
     },
@@ -89,9 +90,9 @@ export default function Footer() {
             <div className="footer__col" key={c.title}>
               <h4>{c.title}</h4>
               <ul>
-                {c.links.map((l) => (
+                {c.links.map(([l, href]) => (
                   <li key={l}>
-                    <a href="#">{l}</a>
+                    <a href={href}>{l}</a>
                   </li>
                 ))}
               </ul>
@@ -143,8 +144,10 @@ export default function Footer() {
             <a href={LINK('')} target="_blank" rel="noreferrer">
               Plan du site
             </a>
-            <a href="#">Mentions légales</a>
-            <a href="#">Politique de confidentialité</a>
+            <a href="https://www.flyasky.com/tg/fr/explore/support/privacy" target="_blank" rel="noreferrer">
+              Politique de confidentialité
+            </a>
+            <a href="/tg/fr/explore/support/feedback">Contact</a>
             <button type="button" className="footer__lang">
               <span className="flag-tg" aria-hidden="true" /> Togo · Français
             </button>
