@@ -7,6 +7,7 @@ import { NEWS_PATH } from './data/sitemap.js';
 import './styles.css';
 import './news.css';
 import './inner.css';
+import './home-v3.css';
 
 // Routage par URL : mêmes chemins que flyasky.com/tg/fr/…
 const path = decodeURIComponent(window.location.pathname).replace(/\/+$/, '') || '/';

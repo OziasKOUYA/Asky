@@ -3,7 +3,8 @@ import { ScrollTrigger, startSmoothScroll, getLenis } from './lib/gsap.js';
 import Loader from './sections/Loader.jsx';
 import Header from './sections/Header.jsx';
 import Hero from './sections/Hero.jsx';
-import Booking from './sections/Booking.jsx';
+import QuickServices from './sections/QuickServices.jsx';
+import BookSheet from './components/BookSheet.jsx';
 import Stats from './sections/Stats.jsx';
 import Offers from './sections/Offers.jsx';
 import Network from './sections/Network.jsx';
@@ -39,7 +40,7 @@ export default function App() {
       <Header />
       <main>
         <Hero ready={ready} />
-        <Booking />
+        <QuickServices />
         <Stats />
         <Offers />
         <Network />
@@ -49,6 +50,7 @@ export default function App() {
         <AppPromo />
       </main>
       <Footer />
+      <BookSheet />
     </>
   );
 }

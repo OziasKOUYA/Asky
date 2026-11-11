@@ -37,7 +37,9 @@ export function initClouds(
   } = {}
 ) {
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+  const touch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+  // Sur téléphone : résolution standard, moins de nuages → 60 i/s même sur Android d'entrée de gamme
+  renderer.setPixelRatio(touch ? 1 : Math.min(window.devicePixelRatio, 1.5));
   renderer.setClearColor(0x000000, 0);
 
   const scene = new THREE.Scene();
@@ -48,8 +50,8 @@ export function initClouds(
   const colors = palette.map((c) => new THREE.Color(c));
   const sprites = [];
   const END_Z = -230;
-  const isMobile = window.innerWidth < 700;
-  const COUNT = isMobile ? 110 : 200;
+  const isMobile = touch || window.innerWidth < 700;
+  const COUNT = isMobile ? 60 : 200;
 
   const addCloud = (x, y, z, w, opacity, color) => {
     const mat = new THREE.SpriteMaterial({
@@ -78,12 +80,12 @@ export function initClouds(
     addCloud(x, y, z, 18 + Math.random() * 36, 0.5 + Math.random() * 0.45, colors[(Math.random() * colors.length) | 0]);
   }
   // Quelques nuages hauts, épars, pour la parallaxe
-  for (let i = 0; i < (isMobile ? 18 : 34); i++) {
+  for (let i = 0; i < (isMobile ? 8 : 34); i++) {
     const z = -20 - Math.random() * 220;
     addCloud((Math.random() - 0.5) * 120, 6 + Math.random() * 16, z, 14 + Math.random() * 22, 0.25 + Math.random() * 0.25, colors[3]);
   }
   // Banc dense couleur café en fin de parcours : la caméra « rentre » dedans
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < (isMobile ? 26 : 50); i++) {
     const z = END_Z + 4 - Math.random() * 18;
     addCloud((Math.random() - 0.5) * 36, (Math.random() - 0.5) * 20, z, 22 + Math.random() * 26, 0.85, new THREE.Color(bank));
   }
@@ -114,9 +116,11 @@ export function initClouds(
     camera.position.x = pointer.cx * 3;
     camera.position.y = 0.4 - pointer.cy * 1.4 + current * 2.4;
     camera.rotation.z = -pointer.cx * 0.025;
-    for (const sp of sprites) {
-      sp.material.rotation += sp.userData.spin;
-      sp.position.x = sp.userData.baseX + Math.sin(t * 0.18 + sp.userData.phase) * 0.7;
+    if (!isMobile) {
+      for (const sp of sprites) {
+        sp.material.rotation += sp.userData.spin;
+        sp.position.x = sp.userData.baseX + Math.sin(t * 0.18 + sp.userData.phase) * 0.7;
+      }
     }
     renderer.render(scene, camera);
   };

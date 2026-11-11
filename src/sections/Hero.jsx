@@ -1,10 +1,14 @@
 import { useEffect, useRef } from 'react';
 import Icon from '../components/Icon.jsx';
-import { gsap, ScrollTrigger, useGSAP, MOTION_OK, scrollToTarget, finePointer } from '../lib/gsap.js';
+import { gsap, ScrollTrigger, useGSAP, MOTION_OK, finePointer, isTouch, SCRUB, openBooking } from '../lib/gsap.js';
+import QuickBook from '../components/QuickBook.jsx';
 import { initClouds } from '../lib/clouds.js';
 import { CITIES, distanceKm } from '../data/site.js';
 
 const WORD = 'AFRIQUE';
+const STEPS = ['Décollage', 'Lomé → Bangui', 'Cotonou → Kinshasa', 'Dakar → Nairobi'];
+const STEP_AT = [0, 3.3, 5.4, 7.5];
+const TOTAL = 10.3;
 const DESTS = [
   { from: 'LFW', to: 'BGF', label: 'Offre du moment' },
   { from: 'COO', to: 'FIH', label: 'Prochain départ' },
@@ -15,6 +19,7 @@ export default function Hero({ ready }) {
   const root = useRef(null);
   const canvas = useRef(null);
   const clouds = useRef(null);
+  const stepRef = useRef(0);
 
   // Scène Three.js (nuages) — créée une fois
   useEffect(() => {
@@ -48,18 +53,33 @@ export default function Hero({ ready }) {
           scrollTrigger: {
             trigger: root.current,
             start: 'top top',
-            end: () => `+=${window.innerHeight * 3.3}`,
-            scrub: 0.9,
+            end: () => `+=${window.innerHeight * (isTouch ? 2.7 : 3.3)}`,
+            scrub: SCRUB,
             pin: true,
+            anticipatePin: 1,
             invalidateOnRefresh: true,
-            onUpdate: (s) => clouds.current?.setProgress(Math.min(1, s.progress * 1.05)),
+            onUpdate: (s) => {
+              clouds.current?.setProgress(Math.min(1, s.progress * 1.05));
+              // Étape active du guide de défilement
+              const t = s.progress * TOTAL;
+              let k = 0;
+              STEP_AT.forEach((at, i) => t >= at - 0.15 && (k = i));
+              if (k !== stepRef.current) {
+                stepRef.current = k;
+                root.current.querySelectorAll('.rail__step').forEach((el, i) => {
+                  el.classList.toggle('is-active', i === k);
+                  el.classList.toggle('is-done', i < k);
+                });
+              }
+              root.current.classList.toggle('is-scrolled', s.progress > 0.01);
+            },
             onToggle: (s) => (s.isActive || s.progress < 1 ? clouds.current?.start() : clouds.current?.stop()),
           },
         });
 
         // 1. Le texte d'accueil s'efface, les lettres du mot géant s'écartent
         tl.to(q('.hero__copy'), { y: -70, autoAlpha: 0, duration: 0.8 }, 0)
-          .to(q('.hero__scroll, .hero__stats'), { autoAlpha: 0, y: 30, duration: 0.5 }, 0)
+          .to(q('.hero__dock'), { y: 90, autoAlpha: 0, duration: 0.6, ease: 'power1.in' }, 0)
           .to(q('.hero__word span'), { x: (i) => (i - 3) * window.innerWidth * 0.08, autoAlpha: 0, duration: 1.5 }, 0.1)
           // 2. L'avion prend de l'altitude puis file vers le haut à droite et dépasse la caméra
           .to(q('.hero__plane'), { scale: 1.14, y: () => -window.innerHeight * 0.05, rotation: -3, duration: 1.1, ease: 'power1.out' }, 0)
@@ -99,7 +119,7 @@ export default function Hero({ ready }) {
               .to(d, { autoAlpha: 0, duration: 0.01 }, t + 2.1);
           }
         });
-        tl.to(q('.dest__progress i'), { scaleX: 1, duration: 6 }, 3.3);
+        tl.fromTo(q('.rail__fill'), { scaleY: 0 }, { scaleY: 1, duration: TOTAL }, 0);
 
         // 4. Fondu café vers la section suivante
         tl.to(q('.dest')[2], { autoAlpha: 0, y: -40, duration: 0.7 }, 9.4).to(q('.hero__fade'), { autoAlpha: 1, duration: 1 }, 9.3);
@@ -120,13 +140,13 @@ export default function Hero({ ready }) {
       const q = gsap.utils.selector(root);
       const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
       intro
-        .fromTo(q('.hero__plane-intro'), { x: () => -window.innerWidth * 0.7, y: 120, scale: 0.55, rotation: 6 }, { x: 0, y: 0, scale: 1, rotation: 0, duration: 1.7, ease: 'power3.out' }, 0)
+        .fromTo(q('.hero__plane-intro'), { x: () => -window.innerWidth * 0.7, y: 120, scale: 0.55, rotation: 6 }, { x: 0, y: 0, scale: 1, rotation: 0, duration: isTouch ? 1.3 : 1.7, ease: 'power3.out' }, 0)
         .fromTo(q('.hero__word span'), { yPercent: 60, autoAlpha: 0 }, { yPercent: 0, autoAlpha: 1, stagger: 0.06, duration: 1.4 }, 0.2)
-        .fromTo(q('.hero__copy .bw'), { y: 28, autoAlpha: 0, filter: 'blur(10px)' }, { y: 0, autoAlpha: 1, filter: 'blur(0px)', stagger: 0.06, duration: 1 }, 0.8)
-        .fromTo(q('.hero__copy .fade-in'), { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.1, duration: 0.9 }, 1.2)
-        .fromTo(q('.hero__stats-in'), { y: 40, autoAlpha: 0, rotationX: -25 }, { y: 0, autoAlpha: 1, rotationX: 0, duration: 1.1, transformPerspective: 900 }, 1.3)
-        .fromTo(q('.hero__rule'), { scaleY: 0 }, { scaleY: 1, duration: 0.9 }, 1.3)
-        .fromTo(q('.hero__scroll > *'), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.8 }, 1.8);
+        .fromTo(q('.hero__copy .bw'), { y: 28, autoAlpha: 0, filter: isTouch ? 'none' : 'blur(10px)' }, { y: 0, autoAlpha: 1, filter: isTouch ? 'none' : 'blur(0px)', stagger: 0.06, duration: 1 }, 0.5)
+        .fromTo(q('.hero__copy .fade-in'), { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.1, duration: 0.9 }, 0.4)
+        .fromTo(q('.hero__dock-in'), { y: 70, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1, ease: 'power3.out' }, 0.6)
+        .fromTo(q('.hero__rule'), { scaleY: 0 }, { scaleY: 1, duration: 0.9 }, 1.1)
+        .fromTo(q('.rail__in'), { x: 30, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.9 }, 1.4);
 
       gsap.to(q('.hero__plane-float'), { y: -14, rotation: -1.2, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
 
@@ -159,7 +179,7 @@ export default function Hero({ ready }) {
       <div className="hero__sky" />
       <canvas className="hero__clouds" ref={canvas} aria-hidden="true" />
       <div className="hero__streaks" aria-hidden="true">
-        {Array.from({ length: 14 }).map((_, i) => (
+        {Array.from({ length: isTouch ? 6 : 14 }).map((_, i) => (
           <i key={i} style={{ '--i': i, top: `${8 + ((i * 37) % 84)}%`, animationDelay: `${(i * 0.23) % 1.4}s` }} />
         ))}
       </div>
@@ -205,45 +225,38 @@ export default function Hero({ ready }) {
             Une seule compagnie pour relier l’Afrique de l’Ouest, du Centre, de l’Est et du Sud. Décollez de Lomé vers 30 destinations, à bord de Boeing 737 modernes.
           </p>
         </div>
-        <div className="hero__ctas fade-in">
-          <a href="#reserver" className="btn btn--primary btn--lg" onClick={(e) => (e.preventDefault(), scrollToTarget('#reserver'))}>
-            Réserver un vol <Icon name="arrow" size={18} />
-          </a>
-          <a href="#reseau" className="btn btn--glass btn--lg" onClick={(e) => (e.preventDefault(), scrollToTarget('#reseau'))}>
-            <Icon name="globe" size={18} /> Voir le réseau
-          </a>
+      </div>
+
+      {/* Réservation visible dès l'arrivée */}
+      <div className="container hero__dock">
+        <div className="hero__dock-in">
+          <QuickBook variant="dock" />
         </div>
       </div>
 
-      <aside className="hero__stats" aria-label="ASKY en bref">
-        <div className="hero__stats-in">
-        <p className="hero__stats-head">
-          <span className="dot" /> Hub de Lomé · LFW
-        </p>
-        <ul>
-          <li>
-            <Icon name="pin" size={18} />
-            <strong>30</strong>
-            <span>destinations</span>
-          </li>
-          <li>
-            <Icon name="globe" size={18} />
-            <strong>28</strong>
-            <span>pays</span>
-          </li>
-          <li>
-            <Icon name="fleet" size={18} />
-            <strong>737</strong>
-            <span>MAX &amp; NG</span>
-          </li>
-        </ul>
+      {/* Guide de défilement vertical : où l'on est dans l'histoire */}
+      <nav className="rail" aria-hidden="true">
+        <div className="rail__in">
+          <span className="rail__hint">
+            <span className="rail__mouse">
+              <i />
+            </span>
+            <span className="rail__hint-txt">Défilez</span>
+            <Icon name="chevron" size={16} className="rail__arrow" />
+          </span>
+          <div className="rail__track">
+            <i className="rail__fill" />
+            <ol>
+              {STEPS.map((st, i) => (
+                <li key={st} className={`rail__step ${i === 0 ? 'is-active' : ''}`} style={{ top: `${(STEP_AT[i] / TOTAL) * 100}%` }}>
+                  <span className="rail__dot" />
+                  <span className="rail__label">{st}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
-      </aside>
-
-      <div className="hero__scroll" aria-hidden="true">
-        <i />
-        <span>Défilez pour décoller</span>
-      </div>
+      </nav>
 
       {/* Destinations affichées après le départ de l'avion */}
       <div className="dests">
@@ -298,16 +311,13 @@ export default function Hero({ ready }) {
                 <span className="chip">
                   <Icon name="fleet" size={16} /> Boeing 737
                 </span>
-                <a href="#reserver" className="btn btn--primary" onClick={(e) => (e.preventDefault(), scrollToTarget('#reserver'))}>
+                <button type="button" className="btn btn--primary" onClick={() => openBooking({ from: d.from, to: d.to, tab: 'book' })}>
                   Réserver ce vol <Icon name="arrow" size={18} />
-                </a>
+                </button>
               </div>
             </div>
           );
         })}
-        <div className="dest__progress" aria-hidden="true">
-          <i />
-        </div>
       </div>
 
       <div className="hero__fade" />

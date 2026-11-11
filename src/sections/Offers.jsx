@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import Icon from '../components/Icon.jsx';
 import { SplitText } from '../components/TextFx.jsx';
 import { OFFERS, CITIES, distanceKm } from '../data/site.js';
-import { gsap, useGSAP, MOTION_OK } from '../lib/gsap.js';
+import { gsap, useGSAP, MOTION_OK, openBooking } from '../lib/gsap.js';
 
 export default function Offers() {
   const root = useRef(null);
@@ -81,7 +81,7 @@ export default function Offers() {
               const B = CITIES[o.to];
               return (
                 <li className="offer" key={o.to}>
-                  <a href="#reserver" className="offer__link">
+                  <a href="/tg/fr/fly/booking" className="offer__link" onClick={(e) => (e.preventDefault(), openBooking({ from: o.from, to: o.to, tab: 'book' }))}>
                     <div className="offer__img">
                       <img src={o.img} alt={`${B.name}, ${B.country}`} loading="lazy" />
                     </div>

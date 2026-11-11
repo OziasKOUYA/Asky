@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { gsap, useGSAP, MOTION_OK } from '../lib/gsap.js';
+import { gsap, useGSAP, MOTION_OK, isTouch } from '../lib/gsap.js';
 
 // Composants de texte animés inspirés de React Bits (BlurText, SplitText, CountUp, ShinyText).
 // Utilisés sur une partie des titres seulement, pour garder du contraste entre les sections.
@@ -13,7 +13,7 @@ export function BlurText({ as: Tag = 'h2', text, className = '', delay = 0, star
       mm.add(MOTION_OK, () => {
         gsap.from(ref.current.querySelectorAll('.bw'), {
           opacity: 0,
-          filter: 'blur(12px)',
+          filter: isTouch ? 'none' : 'blur(12px)',
           y: 26,
           stagger,
           delay,

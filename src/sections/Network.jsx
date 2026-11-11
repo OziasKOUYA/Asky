@@ -4,7 +4,7 @@ import Icon from '../components/Icon.jsx';
 import { SplitText } from '../components/TextFx.jsx';
 import africa from '../data/africa.json';
 import { CITIES, ROUTES, distanceKm } from '../data/site.js';
-import { gsap, ScrollTrigger, useGSAP, MOTION_OK, finePointer } from '../lib/gsap.js';
+import { gsap, ScrollTrigger, useGSAP, MOTION_OK, finePointer, isTouch } from '../lib/gsap.js';
 
 const W = 800;
 const H = 860;
@@ -80,39 +80,46 @@ export default function Network() {
         gsap.set(q('.city__label'), { autoAlpha: 0 });
         gsap.set(q('.fleet__plane'), { autoAlpha: 0 });
 
+        // Animation automatique : elle se joue seule, une fois, dès que la carte arrive à l'écran
         const tl = gsap.timeline({
+          paused: true,
           defaults: { ease: 'none' },
-          scrollTrigger: {
-            trigger: root.current,
-            start: 'top top',
-            end: () => `+=${window.innerHeight * 1.8}`,
-            pin: true,
-            scrub: 0.6,
-            invalidateOnRefresh: true,
-            onUpdate: (s) => {
-              const done = Math.round(gsap.utils.clamp(0, 1, (s.progress - 0.12) / 0.78) * 30);
-              setCount((c) => (c === done ? c : done));
-            },
+          onUpdate: () => {
+            const done = Math.round(gsap.utils.clamp(0, 1, (tl.time() - t0) / (routes.length * each + 0.5)) * 30);
+            setCount((c) => (c === done ? c : done));
           },
+          onComplete: () => {
+            fleetReady = true;
+            if (inView) fleet.play();
+          },
+        });
+        let fleetReady = false;
+        let inView = false;
+        ScrollTrigger.create({
+          trigger: root.current,
+          start: 'top 62%',
+          once: true,
+          onEnter: () => tl.play(),
         });
 
         // La carte se redresse en 3D
-        tl.fromTo(q('.map__stage'), { rotationX: 48, rotationZ: -8, scale: 0.86, y: 60 }, { rotationX: 0, rotationZ: 0, scale: 1, y: 0, duration: 2.2, ease: 'power2.out' }, 0)
-          .fromTo(q('.map__country'), { autoAlpha: 0 }, { autoAlpha: 1, stagger: { each: 0.01, from: 'random' }, duration: 0.6 }, 0)
-          .to(q('.city__label--hub'), { autoAlpha: 1, duration: 0.4 }, 1);
+        tl.fromTo(q('.map__stage'), { rotationX: 48, rotationZ: -8, scale: 0.86, y: 60 }, { rotationX: 0, rotationZ: 0, scale: 1, y: 0, duration: 1.6, ease: 'power3.out' }, 0)
+          .fromTo(q('.map__country'), { autoAlpha: 0 }, { autoAlpha: 1, stagger: { each: 0.008, from: 'random' }, duration: 0.5 }, 0)
+          .to(q('.city__label--hub'), { autoAlpha: 1, duration: 0.4 }, 0.8);
 
         // Les routes se tracent une par une depuis le hub ; la ville s'allume à l'arrivée
-        const t0 = 1.6;
-        const each = 0.22;
+        // ≈ 5 secondes pour tout tracer, sans aucun défilement
+        const t0 = 1.1;
+        const each = 0.1;
         routes.forEach((r, i) => {
           const at = t0 + i * each;
-          tl.to(q(`.route[data-r="${i}"] .route__line`), { strokeDashoffset: 0, duration: 0.8, ease: 'power1.inOut' }, at)
-            .to(q(`.city[data-c="${r.b}"]`), { scale: 1, duration: 0.3, ease: 'back.out(3)' }, at + 0.7)
-            .to(q(`.city__label[data-c="${r.b}"]`), { autoAlpha: 1, duration: 0.3 }, at + 0.7)
-            .to(q(`.map__country[data-n="${COUNTRY_OF[r.b]}"]`), { fill: '#8A4526', duration: 0.4 }, at + 0.7);
+          tl.to(q(`.route[data-r="${i}"] .route__line`), { strokeDashoffset: 0, duration: 0.7, ease: 'power2.inOut' }, at)
+            .to(q(`.city[data-c="${r.b}"]`), { scale: 1, duration: 0.35, ease: 'back.out(3)' }, at + 0.6)
+            .to(q(`.city__label[data-c="${r.b}"]`), { autoAlpha: 1, duration: 0.3 }, at + 0.6)
+            .to(q(`.map__country[data-n="${COUNTRY_OF[r.b]}"]`), { fill: '#8A4526', duration: 0.4 }, at + 0.6);
         });
         // Une fois toutes les lignes tracées : un petit avion par liaison au départ de Lomé
-        tl.to(q('.fleet'), { autoAlpha: 1, duration: 0.6 }, t0 + routes.length * each + 0.5);
+        tl.to(q('.fleet'), { autoAlpha: 1, duration: 0.5 }, t0 + routes.length * each + 0.6);
 
         const fleet = gsap.timeline({ paused: true });
         q('.fleet__plane').forEach((plane, k) => {
@@ -130,7 +137,11 @@ export default function Network() {
           trigger: root.current,
           start: 'top bottom',
           end: () => `+=${window.innerHeight * 4.6}`,
-          onToggle: (s) => (s.isActive ? fleet.play() : fleet.pause()),
+          onToggle: (s) => {
+            inView = s.isActive;
+            if (s.isActive && fleetReady) fleet.play();
+            else fleet.pause();
+          },
         });
 
         // Inclinaison de la carte à la souris
@@ -149,6 +160,7 @@ export default function Network() {
           offMove = () => window.removeEventListener('pointermove', move);
         }
         return () => {
+          tl.kill();
           fleet.kill();
           fleetST.kill();
           offMove?.();
@@ -242,7 +254,7 @@ export default function Network() {
                   ))}
                 </g>
 
-                <g className="routes" filter="url(#glow)">
+                <g className="routes" filter={isTouch ? undefined : 'url(#glow)'}>
                   {routes.map((r, i) => (
                     <g key={i} className={`route ${hover && (r.b === hover || r.a === hover) ? 'is-on' : ''}`} data-r={i} data-b={r.b}>
                       <path className="route__line" d={r.d} pathLength="1" />
@@ -252,7 +264,7 @@ export default function Network() {
 
                 <g className="fleet" aria-hidden="true">
                   {routes.map((r, i) =>
-                    r.a === 'LFW' ? (
+                    r.a === 'LFW' && (!isTouch || i % 2 === 0) ? (
                       <g key={i} className="fleet__plane" data-r={i} data-len={Math.round(r.len)}>
                         <g transform="scale(0.62)">
                           <circle r="9" className="fleet__halo" />

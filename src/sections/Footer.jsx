@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import Icon from '../components/Icon.jsx';
 import { CONTACT, LINK } from '../data/site.js';
-import { gsap, useGSAP, MOTION_OK, scrollToTarget } from '../lib/gsap.js';
+import { gsap, useGSAP, MOTION_OK, openBooking } from '../lib/gsap.js';
 
 const R = '/tg/fr';
 const COLS = [
@@ -42,7 +42,7 @@ export default function Footer() {
               commence <span className="accent">ici</span>
             </h2>
             <div className="cta__actions">
-              <a href="#reserver" className="btn btn--primary btn--lg" onClick={(e) => (e.preventDefault(), scrollToTarget('#reserver'))}>
+              <a href="/tg/fr/fly/booking" className="btn btn--primary btn--lg" onClick={(e) => document.querySelector('.fab') && (e.preventDefault(), openBooking())}>
                 Réserver un vol <Icon name="arrow" size={18} />
               </a>
               <a href={CONTACT.whatsapp} className="btn btn--glass btn--lg" target="_blank" rel="noreferrer">

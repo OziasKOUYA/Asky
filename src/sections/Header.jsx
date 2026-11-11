@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Icon from '../components/Icon.jsx';
 import { CONTACT } from '../data/site.js';
 import { SECTIONS, HOME, NEWS_PATH, isExternal } from '../data/sitemap.js';
-import { gsap, getLenis } from '../lib/gsap.js';
+import { gsap, getLenis, openBooking } from '../lib/gsap.js';
 
 const here = () => window.location.pathname.replace(/\/+$/, '') || '/';
 const isHome = () => ['/', '/tg/fr', '/index.html'].includes(here());
@@ -10,6 +10,7 @@ const extProps = (href) => (isExternal(href) ? { target: '_blank', rel: 'norefer
 
 // Ancre de l'accueil si on y est, sinon page équivalente
 function goTo(anchor, fallback) {
+  if (anchor === '#reserver' && isHome()) return openBooking();
   const el = document.querySelector(anchor);
   if (el) {
     const l = getLenis();
