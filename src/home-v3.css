@@ -30,23 +30,34 @@
   background: radial-gradient(70% 70% at 15% 20%, rgba(250, 240, 228, 0.55), transparent 70%);
 }
 .hero__plane {
-  left: 64%;
-  top: 49%;
-  width: clamp(360px, 50vw, 880px);
+  left: 65%;
+  top: 41%;
+  width: clamp(340px, 45vw, 800px);
 }
 .hero__word {
-  top: 60%;
-  font-size: clamp(90px, 16vw, 300px);
+  top: 51%;
+  /* Centré sous l'avion, à droite : ne passe plus derrière la description */
+  left: 32%;
+  font-size: clamp(90px, 13vw, 240px);
+  /* Plus lisible sur le ciel beige : liseré café très fin + halo chaud */
+  color: rgba(255, 255, 255, 0.96);
+  -webkit-text-stroke: 1.2px rgba(108, 50, 26, 0.2);
+  text-shadow: 0 2px 0 rgba(108, 50, 26, 0.06), 0 22px 60px rgba(108, 50, 26, 0.32);
 }
 .hero__dock {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: clamp(48px, 11vh, 120px);
+  bottom: clamp(32px, 6.5vh, 76px);
   z-index: 5;
 }
 .hero__dock-in {
   visibility: hidden;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.qb--dock .qb__pop {
+  display: none;
 }
 
 /* --- Module de réservation compact --- */
@@ -95,10 +106,10 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  height: 38px;
+  height: 40px;
   padding: 0 15px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 500;
   white-space: nowrap;
   color: var(--brown);
@@ -118,10 +129,10 @@
   gap: 2px;
 }
 .qb__trip button {
-  height: 34px;
-  padding: 0 12px;
+  height: 36px;
+  padding: 0 13px;
   border-radius: 999px;
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--ash);
 }
 .qb__trip button.is-on {
@@ -131,20 +142,20 @@
 }
 .qb__row {
   display: grid;
-  gap: 6px;
+  gap: 8px;
   align-items: stretch;
 }
 .qb__row--book {
-  grid-template-columns: 1.25fr auto 1.25fr 1fr 1fr 1fr auto;
+  grid-template-columns: 1.15fr auto 1.15fr 1.1fr 1.1fr 0.85fr auto;
 }
 .qb__row--simple {
   grid-template-columns: 1fr 1fr auto;
 }
 .qb__f {
   display: grid;
-  gap: 2px;
+  gap: 3px;
   min-width: 0;
-  padding: 9px 14px;
+  padding: 11px 16px;
   border-radius: 18px;
   background: var(--cream);
   border: 1px solid transparent;
@@ -162,7 +173,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -179,17 +190,18 @@
   outline: none;
   background: transparent;
   padding: 0;
-  font-size: 15.5px;
+  font-size: 16.5px;
   color: var(--cafe);
+  cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
   text-overflow: ellipsis;
 }
 .qb__swap {
   align-self: center;
-  width: 38px;
-  height: 38px;
-  margin: 0 -14px;
+  width: 40px;
+  height: 40px;
+  margin: 0 -15px;
   z-index: 1;
   border-radius: 50%;
   display: grid;
@@ -203,13 +215,13 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 0 24px;
-  min-height: 56px;
+  padding: 0 26px;
+  min-height: 62px;
   border-radius: 18px;
   background: var(--yellow);
   color: var(--cafe);
   font-weight: 500;
-  font-size: 15.5px;
+  font-size: 17px;
   white-space: nowrap;
   box-shadow: 0 12px 26px -12px rgba(242, 164, 30, 0.9);
   transition: background 0.3s, transform 0.3s var(--ease);
@@ -230,6 +242,62 @@
   font-size: 13.5px;
   white-space: nowrap;
   box-shadow: var(--shadow);
+}
+
+/* Destinations populaires : un clic remplit l'arrivée */
+.qb__pop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 0 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.qb__pop::-webkit-scrollbar {
+  display: none;
+}
+.qb__pop-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+  margin-right: 4px;
+  font-size: 13.5px;
+  color: var(--ash);
+}
+.qb__pop-label .icon {
+  color: var(--yellow);
+}
+.qb__pop button {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(108, 50, 26, 0.18);
+  font-size: 14px;
+  color: var(--brown);
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+.qb__pop button small {
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  color: var(--ash2);
+}
+.qb__pop button:hover {
+  border-color: var(--brown);
+  background: var(--cream);
+}
+.qb__pop button.is-on {
+  background: var(--cafe);
+  border-color: var(--cafe);
+  color: var(--white);
+}
+.qb__pop button.is-on small {
+  color: var(--yellow);
 }
 
 /* --- Guide de défilement vertical --- */
@@ -590,6 +658,9 @@
   }
 }
 @media (max-width: 900px) {
+  .hero__word {
+    left: 0;
+  }
   .hero__plane {
     left: 56%;
     top: 46%;
@@ -616,26 +687,30 @@
     margin-bottom: 12px;
   }
   .hero__plane {
-    width: 104vw;
+    width: 100vw;
     left: 52%;
-    top: 49%;
+    top: 41%;
   }
   .hero__word {
-    top: 52%;
+    left: 0;
+    top: 45%;
     font-size: 26vw;
   }
   .hero__dock {
-    bottom: clamp(40px, 8svh, 80px);
+    bottom: clamp(28px, 6svh, 60px);
+  }
+  .qb--dock .qb__pop {
+    display: none;
   }
   .hero__dock.container {
     padding: 0 10px;
   }
   .qb {
-    border-radius: 24px;
-    padding: 8px 8px 10px;
+    border-radius: 26px;
+    padding: 10px 10px 12px;
   }
   .qb__top {
-    padding: 0 0 8px;
+    padding: 0 0 10px;
   }
   .qb__trip {
     display: none;
@@ -647,8 +722,8 @@
     flex: 1;
     justify-content: center;
     padding: 0 8px;
-    height: 36px;
-    font-size: 13px;
+    height: 42px;
+    font-size: 14px;
   }
   .qb__tab-long {
     display: none;
@@ -682,22 +757,24 @@
   .qb__row--book .qb__go,
   .qb__row--simple .qb__go {
     grid-column: 1 / -1;
-    min-height: 50px;
+    min-height: 58px;
+    font-size: 16.5px;
   }
   .qb__row--simple {
     grid-template-columns: 1fr;
   }
   .qb__f {
-    padding: 7px 12px;
+    padding: 11px 14px;
+    border-radius: 18px;
   }
   .qb__f select,
   .qb__f input {
-    font-size: 15px;
+    font-size: 16.5px;
   }
   .qb__swap {
-    margin: 0 -12px;
-    width: 34px;
-    height: 34px;
+    margin: 0 -14px;
+    width: 40px;
+    height: 40px;
   }
   .qb--sheet .qb__trip {
     display: inline-flex;
@@ -763,7 +840,16 @@
     display: none;
   }
   .hero__dock {
-    bottom: 28px;
+    bottom: 26px;
+  }
+  .qb--dock .qb__pop {
+    display: none;
+  }
+  .qb--dock .qb__f {
+    padding: 11px 18px;
+  }
+  .qb--dock .qb__go {
+    min-height: 62px;
   }
 }
 
@@ -806,4 +892,84 @@
 .is-touch .fleet__halo,
 .is-touch .app__halo {
   display: none;
+}
+
+/* =========================================================
+   HERO ORDINATEUR — composition proportionnelle
+   Tout (titre, avion, mot, module) suit une même unité --u :
+   l'écran 1440 × 900 sert de référence, les grands écrans
+   gardent exactement les mêmes proportions au lieu de laisser du vide.
+   ========================================================= */
+@media (min-width: 1700px) {
+  :root {
+    --container: min(2040px, 86vw);
+  }
+}
+@media (min-width: 901px) {
+  .hero {
+    --u: min(1vw, 1.75vh);
+    --dock-z: 1;
+    --dock-h: 158px;
+    --dock-b: clamp(26px, 4.5vh, 64px);
+    --dock-zone: calc(var(--dock-b) + var(--dock-h) * var(--dock-z) + 24px);
+    --cw: min(var(--container), 100vw - var(--gutter) * 2);
+    --pw: clamp(460px, calc(var(--u) * 58), 1500px);
+    /* L'avion s'aligne sur le bord droit du contenu, comme le texte sur le bord gauche */
+    --px: calc(50vw + var(--cw) / 2 - var(--pw) * 0.42);
+    --py: calc((var(--header-h) + 100% - var(--dock-zone)) / 2 + var(--u) * 2.5);
+  }
+  .hero__copy {
+    top: calc(var(--header-h) + var(--u) * 2.6);
+  }
+  .hero__title {
+    font-size: clamp(40px, calc(var(--u) * 5.2), 140px);
+  }
+  .hero__badge {
+    font-size: clamp(11px, calc(var(--u) * 0.85), 16px);
+  }
+  .hero__lead-row {
+    max-width: clamp(420px, calc(var(--u) * 33), 760px);
+    margin-top: calc(var(--u) * 1.6);
+  }
+  .hero__lead {
+    font-size: clamp(15.5px, calc(var(--u) * 1.15), 24px);
+    line-height: 1.6;
+  }
+  .hero__plane {
+    left: var(--px);
+    top: var(--py);
+    width: var(--pw);
+  }
+  .hero__word {
+    /* Centré sous l'avion */
+    left: calc(2 * var(--px) - 100vw);
+    right: 0;
+    top: calc(var(--py) + var(--u) * 6.5);
+    font-size: clamp(90px, calc(var(--u) * 13.5), 330px);
+    -webkit-text-stroke-width: clamp(1px, calc(var(--u) * 0.09), 2px);
+  }
+  .hero__dock {
+    bottom: var(--dock-b);
+  }
+  .hero__dock-in {
+    zoom: var(--dock-z);
+  }  .rail {
+    bottom: calc(var(--dock-zone) + 12px);
+  }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .hero {
+    --dock-h: 232px;
+    --pw: clamp(420px, calc(var(--u) * 54), 700px);
+  }
+}
+@media (min-width: 1700px) and (min-height: 940px) {
+  .hero {
+    --dock-z: 1.14;
+  }
+}
+@media (min-width: 2200px) and (min-height: 1140px) {
+  .hero {
+    --dock-z: 1.3;
+  }
 }

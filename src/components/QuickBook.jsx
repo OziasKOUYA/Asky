@@ -11,6 +11,7 @@ const TABS = [
   { id: 'status', label: 'Statut', long: 'Statut du vol', icon: 'status' },
 ];
 const CITY_LIST = Object.entries(CITIES).sort((a, b) => a[1].name.localeCompare(b[1].name, 'fr'));
+const POPULAR = ['ABJ', 'DSS', 'DLA', 'FIH', 'LBV', 'NBO', 'JNB'];
 const today = () => new Date().toISOString().slice(0, 10);
 
 export default function QuickBook({ variant = 'dock', preset = {} }) {
@@ -157,6 +158,26 @@ export default function QuickBook({ variant = 'dock', preset = {} }) {
           </div>
         )}
       </form>
+      {tab === 'book' && (
+        <div className="qb__pop">
+          <span className="qb__pop-label">
+            <Icon name="sparkle" size={14} /> Populaires depuis Lomé
+          </span>
+          {POPULAR.map((code) => (
+            <button
+              key={code}
+              type="button"
+              className={to === code ? 'is-on' : ''}
+              onClick={() => {
+                setTo(code);
+                if (from === code) setFrom('LFW');
+              }}
+            >
+              {CITIES[code].name} <small>{code}</small>
+            </button>
+          ))}
+        </div>
+      )}
       {toast && (
         <p className="qb__toast" role="status">
           {toast}
