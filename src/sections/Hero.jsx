@@ -222,7 +222,10 @@ export default function Hero({ ready }) {
         <div className="hero__lead-row fade-in">
           <span className="hero__rule" aria-hidden="true" />
           <p className="hero__lead">
-            Une seule compagnie pour relier l’Afrique de l’Ouest, du Centre, de l’Est et du Sud. Décollez de Lomé vers 30 destinations, à bord de Boeing 737 modernes.
+            <span className="hero__lead-full">
+              Une seule compagnie pour relier l’Afrique de l’Ouest, du Centre, de l’Est et du Sud. Décollez de Lomé vers 30 destinations, à bord de Boeing 737 modernes.
+            </span>
+            <span className="hero__lead-short">Décollez de Lomé vers 30 destinations africaines, à bord de Boeing 737 modernes.</span>
           </p>
         </div>
       </div>
