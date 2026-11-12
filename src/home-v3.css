@@ -1004,3 +1004,93 @@
     font-size: 22vw;
   }
 }
+
+/* =========================================================
+   HERO TÉLÉPHONE — v4
+   Module de réservation réduit à l'essentiel (trajet, date, recherche),
+   l'avion récupère la place libérée : grand, centré entre le texte et le module.
+   ========================================================= */
+@media (max-width: 700px) {
+  .hero {
+    --dock-b: clamp(14px, 3svh, 26px);
+    --dock-h: 150px;
+    --copy-end: calc(var(--header-h) + 226px);
+    --dock-top: calc(100% - var(--dock-b) - var(--dock-h));
+  }
+  .hero__badge-sep,
+  .hero__badge-since {
+    display: none;
+  }
+  .hero__plane {
+    width: 122vw;
+    left: 50%;
+    top: calc((var(--copy-end) + var(--dock-top)) / 2 + 4px);
+  }
+  .hero__word {
+    left: 0;
+    top: calc((var(--copy-end) + var(--dock-top)) / 2 + 44px);
+    font-size: 25vw;
+    -webkit-text-stroke-width: 1px;
+  }
+  .hero__dock {
+    bottom: var(--dock-b);
+  }
+  .hero__dock.container {
+    padding: 0 12px;
+  }
+
+  /* Module compact : pas d'onglets (les services sont juste en dessous) */
+  .qb--dock {
+    padding: 8px;
+    border-radius: 24px;
+  }
+  .qb--dock .qb__top {
+    display: none;
+  }
+  .qb--dock .qb__row--book {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 6px;
+  }
+  .qb--dock .qb__f {
+    padding: 9px 13px;
+    border-radius: 16px;
+  }
+  .qb--dock .qb__f > span {
+    font-size: 10.5px;
+  }
+  .qb--dock .qb__f select,
+  .qb--dock .qb__f input {
+    font-size: 16px;
+  }
+  .qb--dock .qb__row--book .qb__f:nth-of-type(3) {
+    grid-column: 1 / 2;
+  }
+  .qb--dock .qb__row--book .qb__go {
+    grid-column: 2 / 4;
+    min-height: 0;
+    border-radius: 16px;
+    font-size: 16px;
+  }
+  .qb--dock .qb__swap {
+    width: 36px;
+    height: 36px;
+    margin: 0 -13px;
+  }
+
+  /* Guide de défilement plus discret, collé au bord */
+  .rail {
+    right: 5px;
+    top: calc(var(--header-h) + 40px);
+    height: 120px;
+  }
+  .rail__dot {
+    transform: scale(0.75);
+  }
+}
+/* iOS centre la date : on l'aligne à gauche comme les autres champs */
+.qb__f input[type='date'] {
+  text-align: left;
+}
+.qb__f input[type='date']::-webkit-date-and-time-value {
+  text-align: left;
+}
